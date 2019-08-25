@@ -4,10 +4,10 @@
 # ---------------------------------------------------------------
 
 # Site
-title: EdgeV
+title: EdgeV 连接边缘的价值
 subtitle: Dig the value of edge
-description: A personal blog
-author: Mike
+description: 个人博客
+author: Mike-Zhenquan Liu
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: zh-Hans
 date_format: '%Y-%m-%d'
