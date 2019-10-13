@@ -283,11 +283,13 @@ sidebar:
 
 
 # Blog rolls
-#links_title: Links
-#links_layout: block
-#links_layout: inline
-#links:
-  #Title: http://example.com/
+links_title: Links
+links_layout: block
+links_layout: inline
+links:
+  印象笔记: http://www.yinxiang.com
+  NexT主题站: http://theme-next.simpleyyt.com/getting-started.html
+  微信一键排版: https://www.flyzy2005.cn/tools/online-markdown/
 
 
 # ---------------------------------------------------------------
