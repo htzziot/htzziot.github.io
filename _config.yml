@@ -6,8 +6,8 @@
 # Site
 title: EdgeV 
 subtitle: Dedicate in IIoT area.
-description: 工业物联网及工业大数据领域，还有部分个人成长与技能分享
-author: 麦小权
+description: 工业物联网|工业大数据|个人成长|技能分享
+author: Mike-Zhenquan Liu
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: zh-Hans
 date_format: '%Y-%m-%d'
@@ -215,7 +215,8 @@ font:
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
   # GitHub: https://github.com
-  LinkedIn: https://www.linkedin.com/in/mike-zhenquan-liu-4296127a/
+  领英: https://www.linkedin.com/in/mike-zhenquan-liu-4296127a/
+  微信公众号:  http://img.edgev.cn//edgev/20191013182455.jpg
 
 
 # Social Links Icons
@@ -230,7 +231,8 @@ social_icons:
   GitHub: github
   Twitter: twitter
   Weibo: weibo
-  LinkedIn: linkedin
+  LinkedIn: linkedin-square
+  Weixin: weixin
 
 
 # Sidebar Avatar
@@ -327,10 +329,10 @@ post_wordcount:
   separated_meta: true
 
 # Wechat Subscriber
-#wechat_subscriber:
-  #enabled: true
-  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
-  #description: ex. subscribe to my blog by scanning my public wechat account
+wechat_subscriber:
+  enabled: true
+  qcode: http://img.edgev.cn//edgev/20191013182455.jpg
+  description: 扫码关注DigitalHub公众号
 
 # Declare license on posts
 post_copyright:
