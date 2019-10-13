@@ -286,8 +286,8 @@ sidebar:
 
 # Blog rolls
 links_title: 常用链接
-# links_layout: block
-links_layout: inline
+links_layout: block
+# links_layout: inline
 links:
   印象笔记: http://www.yinxiang.com
   NexT主题站: http://theme-next.simpleyyt.com/getting-started.html
