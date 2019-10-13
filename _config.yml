@@ -4,10 +4,10 @@
 # ---------------------------------------------------------------
 
 # Site
-title: EdgeV
-subtitle: Dig the value of edge
-description: 个人博客
-author: Mike-Zhenquan Liu
+title: EdgeV 
+subtitle: Dedicate in IIoT area.
+description: 工业物联网及工业大数据领域，还有部分个人成长与技能分享
+author: 麦小权
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: zh-Hans
 date_format: '%Y-%m-%d'
@@ -79,18 +79,18 @@ plugins:
 favicon: /assets/favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Jekyll, NexT"
+keywords: "数据分析,工业物联网,物联网,云计算,Data Analytics,IoT,Cloud"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
-rss:
+rss: false
 
 # Specify the date when the site was setup
 #since: 2015
 
 # icon between year and author @Footer
-authoricon: heart
+authoricon: user-secret
 
 # Footer `powered-by` and `theme-info` copyright
 #copyright: true
@@ -214,8 +214,8 @@ font:
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
-  GitHub: https://github.com
-  LinkedIn: https://www.linkedin.com
+  # GitHub: https://github.com
+  LinkedIn: https://www.linkedin.com/in/mike-zhenquan-liu-4296127a/
 
 
 # Social Links Icons
@@ -290,6 +290,7 @@ links:
   印象笔记: http://www.yinxiang.com
   NexT主题站: http://theme-next.simpleyyt.com/getting-started.html
   微信一键排版: https://www.flyzy2005.cn/tools/online-markdown/
+  七牛云: https://portal.qiniu.com
 
 
 # ---------------------------------------------------------------
