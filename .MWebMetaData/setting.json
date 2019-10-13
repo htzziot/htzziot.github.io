@@ -1,7 +1,7 @@
 {
   "name" : "htzziot.github",
   "fileExtension" : ".md",
-  "autoUploadInsertedImageKey" : "qiniu-pics-https:\/\/upload-z1.qiniup.com",
+  "autoUploadInsertedImageKey" : "edgev-blog-https:\/\/upload-z1.qiniup.com",
   "autoUploadInsertedImage" : true,
   "folderType" : 11,
   "mediaFloder" : "media",
