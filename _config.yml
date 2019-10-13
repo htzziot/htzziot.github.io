@@ -268,8 +268,8 @@ sidebar:
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
-  display: post
-  #display: always
+  # display: post
+  display: always
   #display: hide
   #display: remove
 
@@ -293,6 +293,8 @@ links:
   NexT主题站: http://theme-next.simpleyyt.com/getting-started.html
   微信一键排版: https://www.flyzy2005.cn/tools/online-markdown/
   七牛云: https://portal.qiniu.com
+  FontAwesome: http://www.fontawesome.com.cn/
+
 
 
 # ---------------------------------------------------------------
