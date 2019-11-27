@@ -13,6 +13,7 @@
         {
             "posts_path": "/Users/liuzhenquan/Documents/GitHub/htzziot.github.io/_posts",
             "drafts_path": "/Users/liuzhenquan/Documents/GitHub/htzziot.github.io/_drafts",
+            "jekyll_markdown_extension": "md",
         }
     }
 }
