@@ -1,0 +1,18 @@
+{
+    "folders":
+    [
+        {
+            "follow_symlinks": true,
+            "path": "/Users/liuzhenquan/Documents/GitHub/htzziot.github.io/"
+        }
+    ],
+
+    "settings":
+    {
+        "Jekyll":
+        {
+            "posts_path": "/Users/liuzhenquan/Documents/GitHub/htzziot.github.io/_posts",
+            "drafts_path": "/Users/liuzhenquan/Documents/GitHub/htzziot.github.io/_drafts",
+        }
+    }
+}
