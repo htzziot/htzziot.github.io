@@ -8,9 +8,11 @@
 	"buffers":
 	[
 		{
+			"file": "_posts/2019-11-25-template (copy).md",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 1055,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -26,6 +28,74 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"new",
+				"Jekyll: New post from template"
+			],
+			[
+				"MarkdwonLi",
+				"MarkdownLivePreview: Open Preview"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add All"
+			],
+			[
+				"git st",
+				"Git: Status"
+			],
+			[
+				"git pus",
+				"Git: Push"
+			],
+			[
+				"git",
+				"Git: Add..."
+			],
+			[
+				"git pu",
+				"Git: Push"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"new pos",
+				"Jekyll: New post from template"
+			],
+			[
+				"",
+				"Jekyll: New post from template"
+			],
+			[
+				"markdwon",
+				"MarkdownLivePreview: Open Preview"
+			],
+			[
+				"Jekyll: New",
+				"Jekyll: New post from template"
+			],
+			[
+				"jekell",
+				"Jekyll: Edit template"
+			],
 			[
 				"je",
 				"Jekyll: New post from template"
@@ -96,12 +166,28 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/liuzhenquan/Documents/GitHub/htzziot.github.io"
+		"/Users/liuzhenquan/Documents/GitHub/htzziot.github.io",
+		"/Users/liuzhenquan/Documents/GitHub/htzziot.github.io/_posts"
 	],
 	"file_history":
 	[
-		"/Users/liuzhenquan/Library/Application Support/Sublime Text 3/Packages/User/Jekyll.sublime-settings",
+		"/Users/liuzhenquan/Documents/GitHub/htzziot.github.io/_posts/2019-12-08-abc.md",
+		"/Users/liuzhenquan/Library/Application Support/Sublime Text 3/Packages/User/Jekyll Templates/blog-template.yaml",
+		"/Users/liuzhenquan/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/MultiMarkdown.sublime-settings",
+		"/Users/liuzhenquan/Documents/GitHub/htzziot.github.io/_posts/2019-11-27-希望的大地.md",
+		"/Users/liuzhenquan/Documents/GitHub/htzziot.github.io/_posts/2019-11-27-koko.md",
+		"/Users/liuzhenquan/Documents/GitHub/htzziot.github.io/sublime.sublime-project",
+		"/Users/liuzhenquan/Documents/GitHub/htzziot.github.io/_posts/2019-11-27-niu.markdown",
 		"/Users/liuzhenquan/Library/Application Support/Sublime Text 3/Packages/Jekyll/Jekyll.sublime-settings",
+		"/Users/liuzhenquan/Library/Application Support/Sublime Text 3/Packages/User/Jekyll.sublime-settings",
+		"/Users/liuzhenquan/Documents/GitHub/htzziot.github.io/_posts/2019-11-27-mai.markdown",
+		"/Users/liuzhenquan/Documents/GitHub/htzziot.github.io/_posts/2019-11-27-xiaozhe.markdown",
+		"/Users/liuzhenquan/Documents/GitHub/htzziot.github.io/_posts/2019-11-27-test-sublime.markdown",
+		"/Users/liuzhenquan/Documents/GitHub/htzziot.github.io/_posts/2019-11-27-mike.markdown",
+		"/Users/liuzhenquan/Documents/GitHub/htzziot.github.io/_posts/2019-11-27-abc.markdown",
+		"/Users/liuzhenquan/Documents/GitHub/htzziot.github.io/sublime-blog-template.yaml",
+		"/Users/liuzhenquan/Documents/GitHub/htzziot.github.io/_posts/2019-11-27-没有什么能够阻挡.markdown",
+		"/Users/liuzhenquan/Documents/GitHub/htzziot.github.io/_posts/2019-11-27-best-of-you.markdown",
 		"/Users/liuzhenquan/Library/Application Support/abnerworks.Typora/themes/han.css",
 		"/Users/liuzhenquan/OneDrive - ABB/30-Projects/37-Customer/190725汇舸/abb_swagger.yaml",
 		"/Users/liuzhenquan/OneDrive - ABB/30-Projects/37-Customer/190725汇舸/abb_swagger_1021.yaml",
@@ -113,7 +199,6 @@
 		"/Users/liuzhenquan/Desktop/2UBA958000646_October_Event.json",
 		"/Users/liuzhenquan/Desktop/abb_swagger.yaml",
 		"/Users/liuzhenquan/Documents/GitHub/htzziot.github.io/_posts/2019-10-16-abc.markdown",
-		"/Users/liuzhenquan/Library/Application Support/Sublime Text 3/Packages/User/Jekyll Templates/blog-template.yaml",
 		"/Users/liuzhenquan/Documents/GitHub/htzziot.github.io/_posts/2019-10-16-abctest.markdown",
 		"/Users/liuzhenquan/Library/Application Support/Sublime Text 3/Packages/Jekyll/README.md",
 		"/Users/liuzhenquan/Documents/GitHub/htzziot.github.io/_posts/2019-10-16-1.markdown",
@@ -162,23 +247,24 @@
 			[
 				{
 					"buffer": 0,
+					"file": "_posts/2019-11-25-template (copy).md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 1055,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								176,
+								176
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/MarkdownEditing/Markdown.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -224,6 +310,10 @@
 	"output.find_results":
 	{
 		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 121.0
 	},
 	"pinned_build_system": "",
 	"project": "sublime.sublime-project",
