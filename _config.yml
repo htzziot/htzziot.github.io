@@ -118,7 +118,7 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  categories: /categories/
+  # categories: /categories/
   tags: /tags/
   archives: /archives/
   # about: /about/
@@ -746,3 +746,6 @@ images: assets/images
 
 # Theme version
 version: 5.1.1
+
+reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+wechatpay: http://img.edgev.cn//edgev/20191013182455.jpg
