@@ -16,11 +16,13 @@ Azure自学学习路径：https://docs.microsoft.com/zh-cn/learn/paths/azure-fun
 
 考试大纲：https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VwUY
 
+
 课程目录：
 
 ![](http://img.edgev.cn//edgev/20200111094243.png)
 
 ![](http://img.edgev.cn//edgev/20200111094226.png)
+<!-- more -->
 
 # 1 关键概念及术语
 
