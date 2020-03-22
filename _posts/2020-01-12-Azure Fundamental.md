@@ -10,19 +10,20 @@ summary:
 
 # 0 Opening
 
-开发者社区：https://www.microsoft.com/zh-cn/dev-community/Event/Register?eventId=%E5%BE%AE%E8%BD%AFAzure%E5%9F%BA%E7%A1%80%E5%9F%B9%E8%AE%AD%E8%AF%BE%E7%A8%8B_nYSmc8UhkkRS&ocid=aid2423214
+[开发者社区](https://www.microsoft.com/zh-cn/dev-community/Event/Register?eventId=%E5%BE%AE%E8%BD%AFAzure%E5%9F%BA%E7%A1%80%E5%9F%B9%E8%AE%AD%E8%AF%BE%E7%A8%8B_nYSmc8UhkkRS&ocid=aid2423214)
 
-Azure自学学习路径：https://docs.microsoft.com/zh-cn/learn/paths/azure-fundamentals/?ocid=aid2423214_ThankYou_DevComm&eventId=%E5%BE%AE%E8%BD%AFAzure%E5%9F%BA%E7%A1%80%E5%9F%B9%E8%AE%AD%E8%AF%BE%E7%A8%8B_nYSmc8UhkkRS
+[Azure自学学习路径](https://docs.microsoft.com/zh-cn/learn/paths/azure-fundamentals/?ocid=aid2423214_ThankYou_DevComm&eventId=%E5%BE%AE%E8%BD%AFAzure%E5%9F%BA%E7%A1%80%E5%9F%B9%E8%AE%AD%E8%AF%BE%E7%A8%8B_nYSmc8UhkkRS)
 
-考试大纲：https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VwUY
+[考试大纲](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VwUY)
 
+<!-- more -->
 
 课程目录：
 
 ![](http://img.edgev.cn//edgev/20200111094243.png)
 
 ![](http://img.edgev.cn//edgev/20200111094226.png)
-<!-- more -->
+
 
 # 1 关键概念及术语
 
