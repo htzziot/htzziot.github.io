@@ -4,7 +4,7 @@ title: Azure Fundamental培训记录
 date: 2020-01-12 15:24
 category: 
 author: 
-tags: [Azure]
+tags: [Azure,课程笔记]
 summary: 
 ---
 
