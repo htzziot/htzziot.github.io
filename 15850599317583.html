@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+    运营必备的的15种分析方法 - 麦氏曲线
+    
+    </title>
+    <link rel="shortcut icon" href="http://img.edgev.cn//edgev/20200325131907.png" type="image/png" />
+
+    
+    
+    <link href="atom.xml" rel="alternate" title="麦氏曲线" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/style.min.css">
+    <link rel="stylesheet" href="asset/css/doc.css">
+    
+    <script src="asset/app.js"></script>
+</head>
+  <body>
+    <section class="hero">
+      <div class="hero-head">
+          <nav class="navbar" role="navigation" aria-label="main navigation">
+              <div class="container">
+              <div class="navbar-brand">
+                
+                <a target="_self" class="navbar-item " href="index.html">首页</a>
+                
+                <a target="_self" class="navbar-item " href="archives.html">归档</a>
+                
+
+                <a role="button" id="navbarSNSRssSwitchBtn" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarSNSRssButtons">
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                </a>
+              </div>
+            
+              <div id="navbarSNSRssButtons" class="navbar-menu">
+                <div class="navbar-start">
+                  
+                </div>
+            
+                <div class="navbar-end">
+                  <div class="navbar-item">
+                    <!--buttons start-->
+                    <div class="buttons">
+                      
+                      
+                      
+                      
+                      <a href="https://github.com/htzziot" target="_blank" title="github">
+                        <span class="icon is-large has-text-grey-darker">
+                          <svg class="svg-inline--fa fa-github fa-w-16 fa-lg" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github fa-lg"></i> -->
+                        </span>
+                      </a>
+                      
+                      
+                      
+                      <a href="https://weibo.com/msweater" target="_blank" title="weibo">
+                        <span class="icon is-large has-text-grey-darker">
+                          <svg class="svg-inline--fa fa-weibo fa-w-16 fa-lg" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="weibo" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"></path></svg><!-- <i class="fab fa-weibo fa-lg"></i> -->
+                        </span>
+                      </a>
+                      
+                      
+                      
+                      <a href="atom.xml" target="_blank" title="RSS">
+                        <span class="icon is-large has-text-black-bis">
+                          <svg class="svg-inline--fa fa-rss fa-w-14 fa-lg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="rss" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z"></path></svg><!-- <i class="fas fa-rss fa-lg"></i> -->
+                        </span>
+                      </a>
+                    </div>
+                    <!--buttons end-->
+
+                  </div>
+                </div>
+                </div>
+              </div>
+            </nav>
+      </div>
+
+ <div class="hero-body ct-body"></div>
+      
+</section>
+<section class="ct-body">
+  <div class="container">
+    <div class="columns is-variable bd-klmn-columns is-4">
+      <div class="column is-two-thirds">
+        <div class="post-body single-content">      
+          <div class="card-image">
+            <figure class="image">
+              <img class="random-img" src="">
+            </figure>
+          </div>
+          <h1 class="title">
+            运营必备的的15种分析方法   
+          </h1>
+           
+          <div class="media">
+            
+            <figure class="media-left">
+              <p class="image is-48x48">
+                
+                  <img class="is-rounded" src="http://img.edgev.cn//edgev/20191013184152.JPG">
+              </p>
+            </figure>
+            
+            <div class="media-content">
+              <div class="content">
+                <p style="line-height: 29px">
+                 
+                 <a href="https://blog.edgev.cn">Mac Liu</a>
+                 &nbsp;&nbsp;&nbsp;<span style="color: #ccc;">|</span>&nbsp;&nbsp;&nbsp;
+                 
+                 <span class="date">2019/07/24</span>
+                  
+                  <span class="tran-posted-in">posted in</span>&nbsp; 
+                  
+                  
+                      <span class="posted-in"><a href='%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF.html'>个人成长</a></span>
+                       
+                  
+
+                  
+
+                  
+                  &nbsp;&nbsp;&nbsp;<span style="color: #ccc;">|</span>&nbsp;&nbsp;&nbsp;
+                  
+                    <a class="tag is-link is-light" href='tag_%E4%BA%A7%E5%93%81%E8%BF%90%E8%90%A5.html'>#产品运营</a>
+                  
+                    <a class="tag is-link is-light" href='tag_%E6%95%B0%E6%8D%AE%E6%80%9D%E7%BB%B4.html'>#数据思维</a>
+                  
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <article class="markdown-body single-content">
+          <h1 id="toc_0">战略思维</h1>
+
+<ul>
+<li>数据分析的目标：在于创造商业价值，驱动企业业务增长</li>
+<li>数据分析的作用：用户使用 -&gt; 洞察数据 -&gt; 反推需求 -&gt; 创造新产品和服务 -&gt; 用户使用。
+<img src="http://img.edgev.cn//edgev/20191013160946.png" alt=""/>
+## 四阶段进化论
+<img src="http://img.edgev.cn//edgev/20191013161424.png" alt=""/>
+当数据分析的产出可以直接转化为决策，或直接利用数据做出决策，那么这才能直接体现出数据分析的价值。
+<span id="more"></span><!-- more -->
+## EOI框架<br/>
+数据分析对于不同的任务有不同的目标。</li>
+<li>核心任务：巩固盈利。</li>
+<li>战略任务：用于优化，找到方向和赢利点。</li>
+<li>风险任务：用于创新。
+<img src="http://img.edgev.cn//edgev/20191013161608.jpg" alt=""/></li>
+</ul>
+
+<h1 id="toc_1">三大思路</h1>
+
+<h2 id="toc_2">基本步骤</h2>
+
+<p><img src="http://img.edgev.cn//edgev/20191013161836.png" alt=""/></p>
+
+<h2 id="toc_3">分解内外部因素</h2>
+
+<p><img src="http://img.edgev.cn//edgev/20191013161921.png" alt=""/></p>
+
+<h2 id="toc_4">DOSS思路</h2>
+
+<p><img src="http://img.edgev.cn//edgev/20191013161951.png" alt=""/></p>
+
+<h1 id="toc_5">八种方法</h1>
+
+<ol>
+<li>数字与趋势</li>
+<li>维度分解。例如，当监测到网站流量异常时，可以通过拆分地区、访问来源、设备、浏览器等等维度，发现问题所在。</li>
+<li>用户分群。例如访问购物网站、寄送地址在北京的用户，可以被归类为“北京”用户群体。而针对“北京”用户群体，我们可以进一步观察他们购买产品的频度、类别、时间，这样我们就创建出该用户群体的画像。</li>
+<li>转化漏斗。通过漏斗分析可以从先到后还原用户转化的路径，分析每一个转化节点的效率。
+<ol>
+<li>从开始到结尾，整体的转化效率是多少？</li>
+<li>每一步的转化率是多少？</li>
+<li>哪一步流失最多，原因在什么地方？流失的用户符合哪些特征？</li>
+<li>优先解决提升空间最大的环节和步骤。</li>
+</ol></li>
+<li>行为轨迹。例如用户如何从首页进入到购买页。</li>
+<li>留存分析。</li>
+<li>A/B测试。产品在上线过程中经常会使用 A/B 测试来测试不同产品或者功能设计的效果，市场和运营可以通过 A/B 测试来完成不同渠道、内容、广告创意的效果评估。</li>
+<li>数学建模。当一个商业目标与多种行为、画像等信息有关联性时，我们通常会使用数学建模、数据挖掘的手段进行建模，预测该商业结果的产生。</li>
+</ol>
+
+<hr/>
+
+<p>完整文件请见<a href="https://app.yinxiang.com/fx/6a770938-bd9e-42cc-ad58-010704935032">印象笔记剪藏链接</a></p>
+
+        </article>
+        <div class="comments-wrap">
+          <div class="share-comments">
+            
+            <script src="https://utteranc.es/client.js"
+                    repo="htzziot/blogcomments"
+                    issue-term="title"
+                    theme="github-light"
+                    crossorigin="anonymous"
+                    async>
+            </script>
+             
+            
+
+            
+
+            
+          </div>
+        </div><!-- end comments wrap -->
+      </div>
+      <div class="column">
+         <div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      <span class="tran-notice">Notice</span> 
+    </p>
+  </header>
+  <div class="card-content site-notice">
+    <div class="content"> 
+       •  工业AIoT <br> •  个人成长 <br> • 技能分享 <br>  
+    </div>
+  </div>                    
+</div>
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      <span class="tran-site-categories">Categories</span> 
+    </p>
+  </header>
+  <div class="card-content site-categories">
+    <div class="content"> 
+      <ul>
+      
+        <li><a href="%E5%B7%A5%E4%B8%9AAIOT.html">工业AIOT</a>
+          
+          
+          
+        </li> 
+      
+        <li><a href="%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF.html">个人成长</a>
+          
+          
+          
+        </li> 
+      
+        <li><a href="%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB.html">技能分享</a>
+          
+          
+          
+        </li> 
+      
+      </ul>
+    </div>
+  </div>                    
+</div>
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      <span class="tran-site-tags">Tags</span> 
+    </p>
+  </header>
+  <div class="card-content site-tags">
+    <div class="content">
+      <div class="tags">
+      
+        <a class="tag is-link is-light" href="tag_Azure.html">#Azure</a> 
+      
+        <a class="tag is-link is-light" href="tag_%E4%BA%A7%E5%93%81%E8%BF%90%E8%90%A5.html">#产品运营</a> 
+      
+        <a class="tag is-link is-light" href="tag_%E6%80%9D%E7%BB%B4%E5%B7%A5%E5%85%B7.html">#思维工具</a> 
+      
+        <a class="tag is-link is-light" href="tag_%E6%95%B0%E6%8D%AE%E6%80%9D%E7%BB%B4.html">#数据思维</a> 
+      
+        <a class="tag is-link is-light" href="tag_%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html">#时间管理</a> 
+      
+        <a class="tag is-link is-light" href="tag_%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95.html">#滴答清单</a> 
+      
+        <a class="tag is-link is-light" href="tag_%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B.html">#网络课程</a> 
+      
+        <a class="tag is-link is-light" href="tag_%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92.html">#职业规划</a> 
+      
+        <a class="tag is-link is-light" href="tag_%E8%81%8C%E5%9C%BA%E6%8A%80%E8%83%BD.html">#职场技能</a> 
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div><!-- end columns -->
+  </div><!-- end container -->
+</section>
+
+
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+              Copyright &copy; 2019 - 2020
+              <a target="_blank" href="http://www.beian.miit.gov.cn/">京ICP备19034965号-1</a>&nbsp;
+          </p>
+        </div>
+      </footer>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  var imgApi = "https://source.unsplash.com/random/1024x";
+  var imgs = document.getElementsByClassName('random-img');
+  for (var i = 0; i <= imgs.length - 1; i++) {
+    // https://picsum.photos/1024/
+    imgs[i].setAttribute("src", imgApi + (400 + i));
+  }
+</script>
+
+  
+    
+
+
+
+
+  </body>
+</html>

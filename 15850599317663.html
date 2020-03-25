@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+    Azure Fundamental培训记录 - 麦氏曲线
+    
+    </title>
+    <link rel="shortcut icon" href="http://img.edgev.cn//edgev/20200325131907.png" type="image/png" />
+
+    
+    
+    <link href="atom.xml" rel="alternate" title="麦氏曲线" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/style.min.css">
+    <link rel="stylesheet" href="asset/css/doc.css">
+    
+    <script src="asset/app.js"></script>
+</head>
+  <body>
+    <section class="hero">
+      <div class="hero-head">
+          <nav class="navbar" role="navigation" aria-label="main navigation">
+              <div class="container">
+              <div class="navbar-brand">
+                
+                <a target="_self" class="navbar-item " href="index.html">首页</a>
+                
+                <a target="_self" class="navbar-item " href="archives.html">归档</a>
+                
+
+                <a role="button" id="navbarSNSRssSwitchBtn" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarSNSRssButtons">
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                </a>
+              </div>
+            
+              <div id="navbarSNSRssButtons" class="navbar-menu">
+                <div class="navbar-start">
+                  
+                </div>
+            
+                <div class="navbar-end">
+                  <div class="navbar-item">
+                    <!--buttons start-->
+                    <div class="buttons">
+                      
+                      
+                      
+                      
+                      <a href="https://github.com/htzziot" target="_blank" title="github">
+                        <span class="icon is-large has-text-grey-darker">
+                          <svg class="svg-inline--fa fa-github fa-w-16 fa-lg" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github fa-lg"></i> -->
+                        </span>
+                      </a>
+                      
+                      
+                      
+                      <a href="https://weibo.com/msweater" target="_blank" title="weibo">
+                        <span class="icon is-large has-text-grey-darker">
+                          <svg class="svg-inline--fa fa-weibo fa-w-16 fa-lg" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="weibo" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"></path></svg><!-- <i class="fab fa-weibo fa-lg"></i> -->
+                        </span>
+                      </a>
+                      
+                      
+                      
+                      <a href="atom.xml" target="_blank" title="RSS">
+                        <span class="icon is-large has-text-black-bis">
+                          <svg class="svg-inline--fa fa-rss fa-w-14 fa-lg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="rss" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z"></path></svg><!-- <i class="fas fa-rss fa-lg"></i> -->
+                        </span>
+                      </a>
+                    </div>
+                    <!--buttons end-->
+
+                  </div>
+                </div>
+                </div>
+              </div>
+            </nav>
+      </div>
+
+ <div class="hero-body ct-body"></div>
+      
+</section>
+<section class="ct-body">
+  <div class="container">
+    <div class="columns is-variable bd-klmn-columns is-4">
+      <div class="column is-two-thirds">
+        <div class="post-body single-content">      
+          <div class="card-image">
+            <figure class="image">
+              <img class="random-img" src="">
+            </figure>
+          </div>
+          <h1 class="title">
+            Azure Fundamental培训记录   
+          </h1>
+           
+          <div class="media">
+            
+            <figure class="media-left">
+              <p class="image is-48x48">
+                
+                  <img class="is-rounded" src="http://img.edgev.cn//edgev/20191013184152.JPG">
+              </p>
+            </figure>
+            
+            <div class="media-content">
+              <div class="content">
+                <p style="line-height: 29px">
+                 
+                 <a href="https://blog.edgev.cn">Mac Liu</a>
+                 &nbsp;&nbsp;&nbsp;<span style="color: #ccc;">|</span>&nbsp;&nbsp;&nbsp;
+                 
+                 <span class="date">2020/01/09</span>
+                  
+                  <span class="tran-posted-in">posted in</span>&nbsp; 
+                  
+                  
+                      <span class="posted-in"><a href='%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF.html'>个人成长</a></span>
+                       
+                  
+
+                  
+
+                  
+                  &nbsp;&nbsp;&nbsp;<span style="color: #ccc;">|</span>&nbsp;&nbsp;&nbsp;
+                  
+                    <a class="tag is-link is-light" href='tag_Azure.html'>#Azure</a>
+                  
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <article class="markdown-body single-content">
+          <h1 id="toc_0">0 Opening</h1>
+
+<p><a href="https://www.microsoft.com/zh-cn/dev-community/Event/Register?eventId=%E5%BE%AE%E8%BD%AFAzure%E5%9F%BA%E7%A1%80%E5%9F%B9%E8%AE%AD%E8%AF%BE%E7%A8%8B_nYSmc8UhkkRS&amp;ocid=aid2423214">开发者社区</a></p>
+
+<p><a href="https://docs.microsoft.com/zh-cn/learn/paths/azure-fundamentals/?ocid=aid2423214_ThankYou_DevComm&amp;eventId=%E5%BE%AE%E8%BD%AFAzure%E5%9F%BA%E7%A1%80%E5%9F%B9%E8%AE%AD%E8%AF%BE%E7%A8%8B_nYSmc8UhkkRS">Azure自学学习路径</a></p>
+
+<p><a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VwUY">考试大纲</a></p>
+
+<span id="more"></span><!-- more -->
+
+<p>课程目录：</p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111094243.png" alt=""/></p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111094226.png" alt=""/></p>
+
+<h1 id="toc_1">1 关键概念及术语</h1>
+
+<p>高可用性、可扩展性、弹性、敏捷性</p>
+
+<p>容错、安全、灾难恢复、全球覆盖、客户访问延迟</p>
+
+<p>预测成本考虑因素</p>
+
+<p>技能要求考虑因素</p>
+
+<p>提高生产力</p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111093532.png" alt=""/></p>
+
+<p><strong>规模经济效应</strong>：规模较大的企业开展业务的效率更高，平均成本更低。</p>
+
+<p><strong>资本支出</strong>（高昂的前期成本）与<strong>运营支出</strong>（即付即用）。</p>
+
+<p><strong>云模型类型</strong></p>
+
+<blockquote>
+<p><strong>公有云</strong>。公有云服务或托管提供商拥有，为多个组织和用户提供资源和服务，通过安全网络连接访问。</p>
+
+<p><strong>私有云。</strong>由使用云资源的组织拥有和运营。</p>
+
+<p><strong>混合云。</strong>将公有云和私有云结合起来。</p>
+</blockquote>
+
+<p><img src="http://img.edgev.cn//edgev/20200111095123.png" alt=""/></p>
+
+<p><strong>IaaS/PaaS/SaaS</strong>概念及比较</p>
+
+<blockquote>
+<p><img src="http://img.edgev.cn//edgev/20200111095638.png" alt=""/></p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111095706.png" alt=""/></p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111100309.png" alt=""/></p>
+</blockquote>
+
+<h1 id="toc_2">2 核心Azure服务</h1>
+
+<h2 id="toc_3">Azure Region（区域）</h2>
+
+<p>目前55个区域，100+个数据中心。</p>
+
+<p>一个区域里可能或有一个或多个数据中心。数据中心之间用低延迟的告诉网络连接，区域内网络带宽高达1.6Pbps。</p>
+
+<blockquote>
+<p>测试Azure区域网络速度的网站。www.azurespeed.com</p>
+
+<p>Azure 全球基础结构<a href="https://azure.microsoft.com/zh-cn/global-infrastructure/">https://azure.microsoft.com/zh-cn/global-infrastructure/</a></p>
+</blockquote>
+
+<p><strong>特殊区域</strong>：Azure政府（位于美国，提供给美国政府及其服务承包商使用）、Azure中国（世纪互联运营，供中国客户使用）、Azure德国（供将数据留在德国的任何客户使用）</p>
+
+<p><strong>区域对</strong>(<strong>Paired Region)</strong>。与同一个地域中的另一个区域配对，构成区域对。可相互复制Azure资源，减少自然灾害、电力、网络中断引起的中断。</p>
+
+<p><strong>地域（Geography）</strong>。4个：美洲、欧洲、亚太、中东和非洲。</p>
+
+<p><strong>可用性区域</strong><strong>（Availability Zone）</strong>。Azure区域内的物理分离位置，对数据中心的分组，有一个或多个数据中心组成，配备独立的电源、冷却和网络系统。并非所有区域支持这个选项。中国没有。</p>
+
+<p><strong>可用性集(Availability Set)</strong>。</p>
+
+<blockquote>
+<p>更新域（UD，Update Domain）。定期进行维护、性能或安全性跟新时，根据逻辑分组依次进行。每个组就叫一个更新域。</p>
+
+<p>容错域(FD, Fault Domain)。在同一数据中心的不同硬件（一般来说是<strong>物理机架</strong>）之间为工作服务提供物理隔离。</p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111103149.png" alt=""/></p>
+</blockquote>
+
+<h2 id="toc_4">资源组（Resource Group）</h2>
+
+<p>资源的逻辑容器，资源1：1资源组，资源必须存在于某一个资源组。</p>
+
+<p>资源组允许其中的资源组不在同一个区域。</p>
+
+<h2 id="toc_5">Azure资源管理器(Azure Resource Manager, ARM)</h2>
+
+<p><a href="https://docs.microsoft.com/zh-cn/azure/azure-resource-manager/">https://docs.microsoft.com/zh-cn/azure/azure-resource-manager/</a></p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111104611.png" alt=""/></p>
+
+<h2 id="toc_6">Azure计算服务</h2>
+
+<p><strong>虚拟机VM</strong></p>
+
+<p><strong>虚拟机规模集（VMSS）</strong></p>
+
+<p><strong>应用程序服务（web/mobile/API, https）</strong></p>
+
+<p><strong>函数计算</strong></p>
+
+<p><strong>容器服务，ACI（容器实例），AKS（容器集群服务）</strong></p>
+
+<h2 id="toc_7">Azure网络服务</h2>
+
+<p><strong>虚拟网络</strong>，对等互联，必须配置双向的内容。</p>
+
+<p><strong>负载均衡器</strong>，运行于OSI模型的第4层(TCP)</p>
+
+<p><strong>应用程序网关</strong>，运营与OSI模型第7层（http/https）,支持WAF</p>
+
+<p><strong>流量管理器</strong>，全球DNS负载均衡服务。根据DNS请求分发至后端服务</p>
+
+<p><strong>VPN网关</strong>，在Azure虚拟网络与本地网络之间发送加密的网络流量，需要一个本地网络网关。</p>
+
+<p><strong>内容分发网络CDN</strong>，提供内容减少延迟。</p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111120750.png" alt=""/></p>
+
+<h2 id="toc_8">Azure存储服务</h2>
+
+<p>数据类型。结构化、半结构化、非结构化数据。</p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111133053.png" alt=""/></p>
+
+<p>Azure存储账户。Blob，磁盘、存档层、数据湖、文件存储。</p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111133125.png" alt=""/></p>
+
+<h2 id="toc_9">Azure数据库服务</h2>
+
+<p>CosmosDB</p>
+
+<p>SQL DB</p>
+
+<p>数据库迁移服务</p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111134819.png" alt=""/></p>
+
+<h2 id="toc_10">Azure备份与Azure站点恢复</h2>
+
+<p>Azure备份。从本地计算机、VM、PaaS服务中备份数据。</p>
+
+<p>Azure站点恢复。</p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111135317.png" alt=""/></p>
+
+<h2 id="toc_11">Azure市场</h2>
+
+<p>将用户与微软合作伙伴连接起来。</p>
+
+<h2 id="toc_12">Azure物联网</h2>
+
+<p><img src="http://img.edgev.cn//edgev/20200111141739.png" alt=""/></p>
+
+<p>IoT 模拟器 <a href="https://azure-samples.github.io/raspberry-pi-web-simulator/#Getstarted">https://azure-samples.github.io/raspberry-pi-web-simulator/#Getstarted</a></p>
+
+<p>IOT Central中有现成的物联网行业解决方案。</p>
+
+<h2 id="toc_13">Azure大数据及分析</h2>
+
+<p>Azure SQL数据仓库。 与数据湖（非结构化数据）相对应。</p>
+
+<p>Azure HD Insight。</p>
+
+<p>Azure Datalake Analytics</p>
+
+<p><img src="/Users/liuzhenquan/OneDrive%20-%20ABB/00-Inbox/02-MarkdownNotes/img/200111AzureFundamental.assets/image-20200111141823155.png" alt="image-20200111141823155"/></p>
+
+<h2 id="toc_14">AI与机器学习</h2>
+
+<p>认知服务</p>
+
+<p>机器学习服务</p>
+
+<p>机器学习工作室</p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111142951.png" alt=""/></p>
+
+<h2 id="toc_15">无服务器计算</h2>
+
+<p>函数计算</p>
+
+<p>逻辑应用logic app</p>
+
+<p>Azure事件网格</p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111143906.png" alt=""/></p>
+
+<h2 id="toc_16">Azure DevOps</h2>
+
+<h2 id="toc_17">Azure管理工具</h2>
+
+<p>Azure门户, 网站， portal.azure.com</p>
+
+<p>AzureCLI，命令行，az开头的命令</p>
+
+<p>AzurePowershell，6.0之前支持windows，6.0以后支持win/linux/macOS</p>
+
+<p>Azure Cloud Shell，内置了bash,powershell</p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111145240.png" alt=""/></p>
+
+<h2 id="toc_18">Azure顾问</h2>
+
+<p>从高可用性、安全性、性能、成本4个方面给出资源建议。</p>
+
+<h1 id="toc_19">3. 安全、隐私、合规性及信任</h1>
+
+<blockquote>
+<p>Azure 安全：<a href="https://docs.microsoft.com/zh-cn/azure/security/fundamentals/overview">https://docs.microsoft.com/zh-cn/azure/security/fundamentals/overview</a></p>
+</blockquote>
+
+<h2 id="toc_20">安全</h2>
+
+<h3 id="toc_21">网络安全组NSG</h3>
+
+<p>规则集合。 入站和出站规则，包括源/目标的 IP、端口及协议。</p>
+
+<p>规则可以关联到网卡或者子网上。</p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111152108.png" alt=""/></p>
+
+<h3 id="toc_22">Azure防火墙</h3>
+
+<p>有状态的、托管的防火墙即服务。使用Azure监视器来记录日志。</p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111152306.png" alt=""/></p>
+
+<h3 id="toc_23">Azure分布式拒绝服务（DDoS）保护</h3>
+
+<p>DDoS有两个服务层，免费的属于基本配置不需要创建，额外付费获得标准服务层。</p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111152446.png" alt=""/></p>
+
+<h3 id="toc_24">选择Azure网络安全解决方案</h3>
+
+<p><img src="http://img.edgev.cn//edgev/20200111152803.png" alt=""/></p>
+
+<p>安全责任共担。选择不同的服务，有不同的安全责任。</p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111152907.png" alt=""/></p>
+
+<h3 id="toc_25">身份验证和授权</h3>
+
+<p><strong>身份验证</strong>。Authentication，确认是否有合法身份登录。</p>
+
+<ul>
+<li>识别人员或者服务</li>
+<li>请求合法访问凭据</li>
+<li>创建安全身份和访问控制原则的基础</li>
+</ul>
+
+<p><strong>授权。</strong> Authorization，确认是否有权访问资源。</p>
+
+<ul>
+<li>确认经过身份验证的人员或服务的访问级别。</li>
+<li>定义他们可以访问哪些数据，以及可以用数据做什么。</li>
+</ul>
+
+<p><strong>Azure Active Directory（Azure AD or AAD）</strong></p>
+
+<p>身份验证，单点登录、应用程序管理、企业对其他企业、企业对消费者的身份标识服务。</p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111153447.png" alt=""/></p>
+
+<h3 id="toc_26">Azure多重身份验证（MFA）</h3>
+
+<p>要求通过两个、多个元素进行完全身份验证。例如：SMS、电话PIN、Microsoft Authenticator app。</p>
+
+<h3 id="toc_27">Azure安全中心</h3>
+
+<p>提供安全建议，与“Azure顾问”中的功能类似。分为免费版和标准版。</p>
+
+<p>监控安全设置。</p>
+
+<p>自动将安全策略应用于任何新服务。</p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111154241.png" alt=""/></p>
+
+<h3 id="toc_28">Azure Key Vault</h3>
+
+<p>机密信息、密钥、数字证书等重要信息的存储与管理。</p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111154736.png" alt=""/></p>
+
+<h3 id="toc_29">Azure信息保护</h3>
+
+<p>通过标签对文档和电子邮件进行分类和保护：</p>
+
+<ul>
+<li>自动使用管理员定义的规则和条件；</li>
+<li>由用户手动完成；</li>
+<li>提供建议，结合自动、手动方法。</li>
+</ul>
+
+<p><img src="http://img.edgev.cn//edgev/20200111154943.png" alt=""/></p>
+
+<h3 id="toc_30">Azure高级威胁防护（ATP）</h3>
+
+<p>识别、检测和调查高级威胁、身份泄露和恶意内部操作。类似于银行风控系统。</p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111155204.png" alt=""/></p>
+
+<h2 id="toc_31">治理</h2>
+
+<h3 id="toc_32">Azure策略（Policy）</h3>
+
+<p>组织可以定义Azure上的策略。</p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111155508.png" alt=""/></p>
+
+<h3 id="toc_33">基于角色的访问控制RBAC</h3>
+
+<p>实现对Azure资源进行细粒度的访问管理控制。</p>
+
+<ul>
+<li>所有者，可以进行所有操作。</li>
+<li>参与者Contributor，不能分配权限。</li>
+<li>读者Reader，只能查看资源。</li>
+</ul>
+
+<blockquote>
+<p>与Policy的区别：<a href="https://docs.microsoft.com/zh-cn/azure/governance/policy/overview#how-is-it-different-from-rbac">https://docs.microsoft.com/zh-cn/azure/governance/policy/overview#how-is-it-different-from-rbac</a></p>
+</blockquote>
+
+<h3 id="toc_34">Azure锁</h3>
+
+<p>防止资源、资源组被误操作，例如删除。</p>
+
+<h3 id="toc_35">Azure蓝图</h3>
+
+<p><img src="http://img.edgev.cn//edgev/20200111161012.png" alt=""/></p>
+
+<h3 id="toc_36">Azure监视器（Monitor）</h3>
+
+<p>从云和本地收集、分析和采样遥测数据。活动日志无法删除。</p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111162146.png" alt=""/></p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111163451.png" alt=""/></p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111163518.png" alt=""/></p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111163542.png" alt=""/></p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111163605.png" alt=""/></p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111163633.png" alt=""/></p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111163656.png" alt=""/></p>
+
+<h1 id="toc_37">4. 定价与支持。</h1>
+
+<h2 id="toc_38">订阅</h2>
+
+<p>订阅属于某一个AAD目录，订阅主要考虑三个方面。</p>
+
+<ul>
+<li>计费。以订阅为单位生成账单，进行成本划分。</li>
+<li>控制访问。订阅是Azure资源的部署边界，并且能够设置RBAC。</li>
+<li>配额限制。订阅也收到一些明确的资源使用限制，并不能无限创建。例如：最大存储账户容量 2PiB用于美国和欧洲，500TiB用于其他地区及英国。</li>
+</ul>
+
+<h2 id="toc_39">三种购买方式</h2>
+
+<ul>
+<li><p>企业协议</p></li>
+<li><p>网络直购</p></li>
+<li><p>云解决方案提供商</p></li>
+</ul>
+
+<p><img src="http://img.edgev.cn//edgev/20200111163905.png" alt=""/></p>
+
+<h2 id="toc_40">免费账户</h2>
+
+<p>免费期12个月。10个免费的服务。</p>
+
+<h2 id="toc_41">影响成本的因素</h2>
+
+<p>资源类型、购买方式、资源位置。</p>
+
+<h2 id="toc_42">区域定价</h2>
+
+<p><img src="http://img.edgev.cn//edgev/20200111164422.png" alt=""/></p>
+
+<p><strong>定价计算器</strong></p>
+
+<p><strong>总体拥有成本计算器</strong></p>
+
+<p><strong>降低成本</strong></p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111164744.png" alt=""/></p>
+
+<h2 id="toc_43">Azure成本管理</h2>
+
+<p><img src="http://img.edgev.cn//edgev/20200111164938.png" alt=""/></p>
+
+<h2 id="toc_44">支持计划选项</h2>
+
+<p>免费支持：免费提供结算和订阅支持；文档；社区。</p>
+
+<p>付费支持：技术，分级别。</p>
+
+<h2 id="toc_45">SLA</h2>
+
+<p><img src="http://img.edgev.cn//edgev/20200111165929.png" alt=""/></p>
+
+<p><img src="http://img.edgev.cn//edgev/20200111170111.png" alt=""/></p>
+
+<h2 id="toc_46">Azure产品生命周期</h2>
+
+<p>在Azure更新网址中查看，产品公告，已发布、预览、  </p>
+
+<p>个人预览(Private)：某些客户可以经申请使用。</p>
+
+<p>公共预览(Public)：所有刻个都可以使用。</p>
+
+<p>预览产品没有SLA保障、没有技术支持、价格有可能与正式版不同。</p>
+
+<p>GA(General Availability)，一般可用性，就是正式发布。</p>
+
+<h1 id="toc_47">附录</h1>
+
+<p><img src="http://img.edgev.cn//edgev/20200111134023.jpeg" alt=""/></p>
+
+        </article>
+        <div class="comments-wrap">
+          <div class="share-comments">
+            
+            <script src="https://utteranc.es/client.js"
+                    repo="htzziot/blogcomments"
+                    issue-term="title"
+                    theme="github-light"
+                    crossorigin="anonymous"
+                    async>
+            </script>
+             
+            
+
+            
+
+            
+          </div>
+        </div><!-- end comments wrap -->
+      </div>
+      <div class="column">
+         <div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      <span class="tran-notice">Notice</span> 
+    </p>
+  </header>
+  <div class="card-content site-notice">
+    <div class="content"> 
+       •  工业AIoT <br> •  个人成长 <br> • 技能分享 <br>  
+    </div>
+  </div>                    
+</div>
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      <span class="tran-site-categories">Categories</span> 
+    </p>
+  </header>
+  <div class="card-content site-categories">
+    <div class="content"> 
+      <ul>
+      
+        <li><a href="%E5%B7%A5%E4%B8%9AAIOT.html">工业AIOT</a>
+          
+          
+          
+        </li> 
+      
+        <li><a href="%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF.html">个人成长</a>
+          
+          
+          
+        </li> 
+      
+        <li><a href="%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB.html">技能分享</a>
+          
+          
+          
+        </li> 
+      
+      </ul>
+    </div>
+  </div>                    
+</div>
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      <span class="tran-site-tags">Tags</span> 
+    </p>
+  </header>
+  <div class="card-content site-tags">
+    <div class="content">
+      <div class="tags">
+      
+        <a class="tag is-link is-light" href="tag_Azure.html">#Azure</a> 
+      
+        <a class="tag is-link is-light" href="tag_%E4%BA%A7%E5%93%81%E8%BF%90%E8%90%A5.html">#产品运营</a> 
+      
+        <a class="tag is-link is-light" href="tag_%E6%80%9D%E7%BB%B4%E5%B7%A5%E5%85%B7.html">#思维工具</a> 
+      
+        <a class="tag is-link is-light" href="tag_%E6%95%B0%E6%8D%AE%E6%80%9D%E7%BB%B4.html">#数据思维</a> 
+      
+        <a class="tag is-link is-light" href="tag_%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html">#时间管理</a> 
+      
+        <a class="tag is-link is-light" href="tag_%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95.html">#滴答清单</a> 
+      
+        <a class="tag is-link is-light" href="tag_%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B.html">#网络课程</a> 
+      
+        <a class="tag is-link is-light" href="tag_%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92.html">#职业规划</a> 
+      
+        <a class="tag is-link is-light" href="tag_%E8%81%8C%E5%9C%BA%E6%8A%80%E8%83%BD.html">#职场技能</a> 
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div><!-- end columns -->
+  </div><!-- end container -->
+</section>
+
+
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+              Copyright &copy; 2019 - 2020
+              <a target="_blank" href="http://www.beian.miit.gov.cn/">京ICP备19034965号-1</a>&nbsp;
+          </p>
+        </div>
+      </footer>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  var imgApi = "https://source.unsplash.com/random/1024x";
+  var imgs = document.getElementsByClassName('random-img');
+  for (var i = 0; i <= imgs.length - 1; i++) {
+    // https://picsum.photos/1024/
+    imgs[i].setAttribute("src", imgApi + (400 + i));
+  }
+</script>
+
+  
+    
+
+
+
+
+  </body>
+</html>
