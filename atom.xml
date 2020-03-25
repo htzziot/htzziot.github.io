@@ -4,13 +4,24 @@
   <title><![CDATA[麦氏曲线]]></title>
   <link href="https://blog.edgev.cn/atom.xml" rel="self"/>
   <link href="https://blog.edgev.cn/"/>
-  <updated>2020-03-25T21:28:07+08:00</updated>
+  <updated>2020-03-25T21:30:00+08:00</updated>
   <id>https://blog.edgev.cn/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[使用MWeb作为知识输出工具]]></title>
+    <link href="https://blog.edgev.cn/15851432046670.html"/>
+    <updated>2020-03-25T21:33:24+08:00</updated>
+    <id>https://blog.edgev.cn/15851432046670.html</id>
+    <content type="html"><![CDATA[
+<p>使用markdown已经变成了一种习惯。</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[利用引子清单解放大脑]]></title>
