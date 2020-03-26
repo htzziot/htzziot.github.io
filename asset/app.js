@@ -6,7 +6,7 @@ var i18nZHData = {
     'tran-archives': '归档',
     'tran-categories': '分类: ',
     'tran-comments': '评论',
-    'tran-readmore': '<i class="fa fa-caret-right"></i>&nbsp;&nbsp;阅读全文',
+    'tran-readmore': '阅读全文',
     'tran-prev-page': '&laquo; 上一页',
     'tran-next-page': '下一页 &raquo;',
     'tran-disqus-comments': '评论',
