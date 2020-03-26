@@ -1,7 +1,12 @@
 var i18nZHData = {
 <<<<<<< HEAD
+<<<<<<< HEAD
     'tran-site-categories': '<i class="fa fa-folder"></i>&nbsp;&nbsp;分类',
     'tran-site-tags': '<i class="fa fa-tags"></i>&nbsp;&nbsp;标签',
+=======
+    'tran-site-categories': '分类',
+    'tran-site-tags': '标签',
+>>>>>>> parent of 32bf895... 2020-03-26 11:13:45
 =======
     'tran-site-categories': '分类',
     'tran-site-tags': '标签',
