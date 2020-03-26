@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
   <loc>https://blog.edgev.cn/</loc>
+<<<<<<< HEAD
   <lastmod>2020-03-26T13:09:41+08:00</lastmod>
+=======
+  <lastmod>2020-03-26T00:06:32+08:00</lastmod>
+>>>>>>> parent of 32bf895... 2020-03-26 11:13:45
 </url>
 
 <url>
