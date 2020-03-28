@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+         Markdown的基本语法 - 麦氏增长曲线 
+    </title>
+    
+    <link rel="shortcut icon" href="http://img.edgev.cn//edgev/20200325131907.png" type="image/png" />  
+    <link href="atom.xml" rel="alternate" title="麦氏增长曲线" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/style.min.css">
+    <link rel="stylesheet" href="asset/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="asset/css/doc.css"> 
+    <script src="asset/app.js"></script>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="hero-head">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="container">
+                    <div class="navbar-brand">
+                        
+                        <a target="_self" class="navbar-item " href="index.html"><i class="fa fa-home"></i> &nbsp;&nbsp;Home</a> 
+                        <a target="_self" class="navbar-item " href="archives.html"><i class="fa fa-archive"></i> &nbsp;&nbsp;Archive</a> 
+                        <a target="_self" class="navbar-item " href="collection.html"><i class="fa fa-bookmark"></i> &nbsp;&nbsp;Collection</a> 
+
+                        <a role="button" id="navbarSNSRssSwitchBtn" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarSNSRssButtons">
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                        </a>
+                    </div>
+
+                    <div id="navbarSNSRssButtons" class="navbar-menu">
+                        <div class="navbar-start">
+
+                        </div>
+
+                        <div class="navbar-end">
+                            <div class="navbar-item">
+                                <!--buttons start-->
+                                <div class="buttons">
+                                    
+                                    <a href="https://instagram.com/macfotoo" target="_blank" title="instagram">
+                                        <span class="icon is-large has-text-grey-darker">
+                          <svg class="svg-inline--fa fa-instagram fa-w-14 fa-lg" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg><!-- <i class="fab fa-instagram fa-lg"></i> -->
+                        </span>
+                                    </a>
+                                       
+                                    <a href="https://github.com/htzziot" target="_blank" title="github">
+                                        <span class="icon is-large has-text-grey-darker">
+                          <svg class="svg-inline--fa fa-github fa-w-16 fa-lg" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github fa-lg"></i> -->
+                        </span>
+                                    </a>
+                                     
+                                    <a href="https://www.linkedin.com/in/mike-zhenquan-liu-4296127a/" target="_blank" title="linkedin">
+                                        <span class="icon is-large has-text-grey-darker">
+                          <img src="http://img.edgev.cn//edgev/20200325222238.png">
+                        </span>
+                                    </a>
+                                     
+                                    <a href="https://weibo.com/msweater" target="_blank" title="weibo">
+                                        <span class="icon is-large has-text-grey-darker">
+                          <svg class="svg-inline--fa fa-weibo fa-w-16 fa-lg" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="weibo" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"></path></svg><!-- <i class="fab fa-weibo fa-lg"></i> -->
+                        </span>
+                                    </a>
+                                     
+                                    <a href="mailto: lzq_ee@163.com" target="_blank" title="email">
+                                        <span class="icon is-large has-text-grey-darker">
+                          <svg class="svg-inline--fa fa-email fa-w-14 fa-lg" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1208" width="200" height="200"><path d="M935.335233 153.62202h-846.666656a84.666666 84.666666 0 0 0-84.666666 84.666666v550.333327a84.666666 84.666666 0 0 0 84.666666 84.666665h846.666656a84.666666 84.666666 0 0 0 84.666666-84.666665v-550.333327a84.666666 84.666666 0 0 0-84.666666-84.666666z m-27.293711 213.952665L557.558216 549.672927a94.993177 94.993177 0 0 1-87.065555 0.197555l-354.612218-182.202664a42.333333 42.333333 0 0 1 38.698311-75.308177l354.606573 182.202664a10.196689 10.196689 0 0 0 9.341556-0.022577l350.477662-182.089776a42.333333 42.333333 0 1 1 39.034155 75.127555z" fill="#2c2c2c" p-id="1209"></path></svg>
+                        </span>
+                                    </a>
+                                     
+                                    <a href="atom.xml" target="_blank" title="RSS">
+                                        <span class="icon is-large has-text-black-bis">
+                          <svg class="svg-inline--fa fa-rss fa-w-14 fa-lg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="rss" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z"></path></svg><!-- <i class="fas fa-rss fa-lg"></i> -->
+                        </span>
+                                    </a>
+                                </div>
+                                <!--buttons end-->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div> <div class="hero-body ct-body"></div>
+
+</section>
+<section class="ct-body">
+    <div class="container">
+        <div class="columns is-variable bd-klmn-columns is-4">
+            <div class="column is-two-thirds">
+                <div class="post-body single-content">
+                    <!--<div class="card-image">
+            <figure class="image">
+              <img class="random-img" src="">
+            </figure>
+          </div> -->
+                    <h1 class="title">
+                        Markdown的基本语法
+                    </h1>
+
+                    <div class="media">
+                        
+                        <figure class="media-left">
+                            <p class="image is-48x48">
+
+                                <img class="is-rounded" src="http://img.edgev.cn//edgev/20191013184152.JPG">
+                            </p>
+                        </figure>
+                        
+                        <div class="media-content">
+                            <div class="content">
+                                <p style="line-height: 29px">
+                                    
+                                    <i class="fa fa-user-secret"></i>&nbsp;
+                                    <a href="https://blog.edgev.cn">Mac Liu</a> &nbsp;&nbsp;&nbsp;
+                                    <span style="color: #ccc;">|</span>&nbsp;&nbsp;&nbsp; 
+                                    <span class="date">2020/03/26</span> 
+                                    <span class="tran-posted-in">posted in</span>&nbsp;&nbsp;&nbsp;  
+                                    <i class="fa fa-folder"></i>&nbsp;
+                                    <span class="posted-in"><a href='%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB.html'>工具分享</a></span>     &nbsp;&nbsp;&nbsp;
+                                    <span style="color: #ccc;">|</span>&nbsp;&nbsp;&nbsp;
+
+                                    <a class="tag is-link is-light" href='tag_Markdown.html'>#Markdown</a>  
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <article class="markdown-body single-content">
+                    <p>这篇文章是来源于Typora软件中的帮助文档。<br/>
+如果嫌英文看得费劲，可以查看<a href="https://zh.mweb.im/markdown.html">这里</a>的另一份中文教程。</p>
+
+<p>在刚开始接触Markdown的时候会一下子记不住那么多语法，我可以推荐优先学习以下几个内容，非常简单。</p>
+
+<ul>
+<li><a href="#toc_3">标题层级</a></li>
+<li><a href="#toc_5">无序符号</a></li>
+<li><a href="#toc_5">有序符号</a></li>
+<li><a href="#toc_4">引用</a></li>
+<li><a href="#toc_15">链接</a></li>
+<li><a href="#toc_19">图片</a></li>
+<li><a href="#toc_13">文章目录</a></li>
+<li>对于涉及代码记录的同学，可以再多记一个<a href="#toc_21">代码块</a>。</li>
+</ul>
+
+<hr/>
+
+<h2 id="toc_0">Overview</h2>
+
+<p><strong>Markdown</strong> is created by <a href="http://daringfireball.net/">Daring Fireball</a>; the original guideline is <a href="http://daringfireball.net/projects/markdown/syntax">here</a>. Its syntax, however, varies between different parsers or editors. <strong>Typora</strong> is using <a href="https://help.github.com/articles/github-flavored-markdown/">GitHub Flavored Markdown</a>.</p>
+
+<h2 id="toc_1">Block Elements</h2>
+
+<h3 id="toc_2">Paragraph and line breaks</h3>
+
+<p>A paragraph is simply one or more consecutive lines of text. In markdown source code, paragraphs are separated by two or more blank lines. In Typora, you only need one blank line (press <code>Return</code> once) to create a new paragraph.</p>
+
+<p>Press <code>Shift</code> + <code>Return</code> to create a single line break. Most other markdown parsers will ignore single line breaks, so in order to make other markdown parsers recognize your line break, you can leave two spaces at the end of the line, or insert <code>&lt;br/&gt;</code>.</p>
+
+<h3 id="toc_3">Headers</h3>
+
+<p>Headers use 1-6 hash (<code>#</code>) characters at the start of the line, corresponding to header levels 1-6. For example:</p>
+
+<pre class="line-numbers"><code class="language-markdown"># This is an H1
+
+## This is an H2
+
+###### This is an H6
+</code></pre>
+
+<p>In Typora, input ‘#’s followed by title content, and press <code>Return</code> key will create a header.</p>
+
+<h3 id="toc_4">Blockquotes</h3>
+
+<p>Markdown uses email-style &gt; characters for block quoting. They are presented as:</p>
+
+<pre class="line-numbers"><code class="language-markdown">&gt; This is a blockquote with two paragraphs. This is first paragraph.
+&gt;
+&gt; This is second pragraph. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+
+
+
+&gt; This is another blockquote with one paragraph. There is three empty line to seperate two blockquote.
+</code></pre>
+
+<p>In Typora, inputting ‘&gt;’ followed by your quote contents will generate a quote block. Typora will insert a proper ‘&gt;’ or line break for you. Nested block quotes (a block quote inside another block quote) by adding additional levels of ‘&gt;’.</p>
+
+<h3 id="toc_5">Lists</h3>
+
+<p>Input <code>* list item 1</code> will create an unordered list - the <code>*</code> symbol can be replace with <code>+</code> or <code>-</code>.</p>
+
+<p>Input <code>1. list item 1</code> will create an ordered list - their markdown source code is as follows:</p>
+
+<pre class="line-numbers"><code class="language-markdown">## un-ordered list
+*   Red
+*   Green
+*   Blue
+
+## ordered list
+1.  Red
+2.  Green
+3.  Blue
+</code></pre>
+
+<h3 id="toc_6">Task List</h3>
+
+<p>Task lists are lists with items marked as either [ ] or <a href="incomplete%20or%20complete">x</a>. For example:</p>
+
+<pre class="line-numbers"><code class="language-markdown">- [ ] a task list item
+- [ ] list syntax required
+- [ ] normal **formatting**, @mentions, #1234 refs
+- [ ] incomplete
+- [x] completed
+</code></pre>
+
+<p>You can change the complete/incomplete state by clicking on the checkbox before the item.</p>
+
+<h3 id="toc_7">(Fenced) Code Blocks</h3>
+
+<p>Typora only supports fences in GitHub Flavored Markdown. Original code blocks in markdown are not supported.</p>
+
+<p>Using fences is easy: Input ``` and press <code>return</code>. Add an optional language identifier after ``` and we&#39;ll run it through syntax highlighting:</p>
+
+<pre class="line-numbers"><code class="language-markdown">Here&#39;s an example:
+
+​```
+function test() {
+  console.log(&quot;notice the blank line before this function?&quot;);
+}
+​```
+
+syntax highlighting:
+​```ruby
+require &#39;redcarpet&#39;
+markdown = Redcarpet.new(&quot;Hello World!&quot;)
+puts markdown.to_html
+​```
+</code></pre>
+
+<h3 id="toc_8">Math Blocks</h3>
+
+<p>You can render <em>LaTeX</em> mathematical expressions using <strong>MathJax</strong>.</p>
+
+<p>To add a mathematical expression, input <code>$$</code> and press the &#39;Return&#39; key. This will trigger an input field which accepts <em>Tex/LaTex</em> source. For example:</p>
+
+<p>\[<br/>
+\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}<br/>
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\<br/>
+\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \\<br/>
+\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \\<br/>
+\end{vmatrix}<br/>
+\]</p>
+
+<p>In the markdown source file, the math block is a <em>LaTeX</em> expression wrapped by a pair of ‘$$’ marks:</p>
+
+<pre class="line-numbers"><code class="language-markdown">$$
+\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \\
+\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \\
+\end{vmatrix}
+$$
+</code></pre>
+
+<p>You can find more details <a href="https://support.typora.io/Math/">here</a>.</p>
+
+<h3 id="toc_9">Tables</h3>
+
+<p>Input <code>| First Header  | Second Header |</code> and press the <code>return</code> key. This will create a table with two columns.</p>
+
+<p>After a table is created, putting focus on that table will open up a toolbar for the table where you can resize, align, or delete the table. You can also use the context menu to copy and add/delete individual columns/rows.</p>
+
+<p>The full syntax for tables is described below, but it is not necessary to know the full syntax in detail as the markdown source code for tables is generated automatically by Typora.</p>
+
+<p>In markdown source code, they look like:</p>
+
+<pre class="line-numbers"><code class="language-markdown">| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+</code></pre>
+
+<p>You can also include inline Markdown such as links, bold, italics, or strikethrough in the table.</p>
+
+<p>Finally, by including colons (<code>:</code>) within the header row, you can define text in that column to be left-aligned, right-aligned, or center-aligned:</p>
+
+<pre class="line-numbers"><code class="language-markdown">| Left-Aligned  | Center Aligned  | Right Aligned |
+| :------------ |:---------------:| -----:|
+| col 3 is      | some wordy text | $1600 |
+| col 2 is      | centered        |   $12 |
+| zebra stripes | are neat        |    $1 |
+</code></pre>
+
+<p>A colon on the left-most side indicates a left-aligned column; a colon on the right-most side indicates a right-aligned column; a colon on both sides indicates a center-aligned column.</p>
+
+<h3 id="toc_10">Footnotes</h3>
+
+<pre class="line-numbers"><code class="language-markdown">You can create footnotes like this[^footnote].
+
+[^footnote]: Here is the *text* of the **footnote**.
+</code></pre>
+
+<p>will produce:</p>
+
+<p>You can create footnotes like this<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup>.</p>
+
+<p>Hover over the ‘footnote’ superscript to see content of the footnote.</p>
+
+<h3 id="toc_11">Horizontal Rules</h3>
+
+<p>Inputting <code>***</code> or <code>---</code> on a blank line and pressing <code>return</code> will draw a horizontal line.</p>
+
+<hr/>
+
+<h3 id="toc_12">YAML Front Matter</h3>
+
+<p>Typora now supports <a href="http://jekyllrb.com/docs/frontmatter/">YAML Front Matter</a>. Input <code>---</code> at the top of the article and then press <code>Return</code> to introduce a metadata block. Alternatively, you can insert a metadata block from the top menu of Typora.</p>
+
+<h3 id="toc_13">Table of Contents (TOC)</h3>
+
+<p>Input <code>[toc]</code> and press the <code>Return</code> key. This will create a  “Table of Contents” section. The TOC extracts all headers from the document, and its contents are updated automatically as you add to the document.</p>
+
+<h2 id="toc_14">Span Elements</h2>
+
+<p>Span elements will be parsed and rendered right after typing. Moving the cursor in middle of those span elements will expand those elements into markdown source. Below is an explanation of the syntax for each span element.</p>
+
+<h3 id="toc_15">Links</h3>
+
+<p>Markdown supports two styles of links: inline and reference.</p>
+
+<p>In both styles, the link text is delimited by [square brackets].</p>
+
+<p>To create an inline link, use a set of regular parentheses immediately after the link text’s closing square bracket. Inside the parentheses, put the URL where you want the link to point, along with an optional title for the link, surrounded in quotes. For example:</p>
+
+<pre class="line-numbers"><code class="language-markdown">This is [an example](http://example.com/ &quot;Title&quot;) inline link.
+
+[This link](http://example.net/) has no title attribute.
+</code></pre>
+
+<p>will produce:</p>
+
+<p>This is <a href="http://example.com/%22Title%22">an example</a> inline link. (<code>&lt;p&gt;This is &lt;a href=&quot;http://example.com/&quot; title=&quot;Title&quot;&gt;</code>)</p>
+
+<p><a href="http://example.net/">This link</a> has no title attribute. (<code>&lt;p&gt;&lt;a href=&quot;http://example.net/&quot;&gt;This link&lt;/a&gt; has no</code>)</p>
+
+<h4 id="toc_16">Internal Links</h4>
+
+<p><strong>You can set the href to headers</strong>, which will create a bookmark that allow you to jump to that section after clicking. For example:</p>
+
+<p>Command(on Windows: Ctrl) + Click <a href="#block-elements">This link</a> will jump to header <code>Block Elements</code>. To see how to write that, please move cursor or click that link with <code>⌘</code> key pressed to expand the element into markdown source.</p>
+
+<h4 id="toc_17">Reference Links</h4>
+
+<p>Reference-style links use a second set of square brackets, inside which you place a label of your choosing to identify the link:</p>
+
+<pre class="line-numbers"><code class="language-markdown">This is [an example][id] reference-style link.
+
+Then, anywhere in the document, you define your link label on a line by itself like this:
+
+[id]: http://example.com/  &quot;Optional Title Here&quot;
+</code></pre>
+
+<p>In Typora, they will be rendered like so:</p>
+
+<p>This is [an example][id] reference-style link.</p>
+
+<p>[id]: <a href="http://example.com/">http://example.com/</a>   &quot;Optional Title Here&quot;</p>
+
+<p>The implicit link name shortcut allows you to omit the name of the link, in which case the link text itself is used as the name. Just use an empty set of square brackets — for example, to link the word “Google” to the google.com web site, you could simply write:</p>
+
+<pre class="line-numbers"><code class="language-markdown">[Google][]
+And then define the link:
+
+[Google]: http://google.com/
+</code></pre>
+
+<p>In Typora, clicking the link will expand it for editing, and command+click will open the hyperlink in your web browser.</p>
+
+<h3 id="toc_18">URLs</h3>
+
+<p>Typora allows you to insert URLs as links, wrapped by <code>&lt;</code>brackets<code>&gt;</code>.</p>
+
+<p><code>&lt;i@typora.io&gt;</code> becomes <a href="mailto:i@typora.io">i@typora.io</a>.</p>
+
+<p>Typora will also automatically link standard URLs. e.g: <a href="http://www.google.com">www.google.com</a>.</p>
+
+<h3 id="toc_19">Images</h3>
+
+<p>Images have similar syntax as links, but they require an additional <code>!</code> char before the start of the link. The syntax for inserting an image looks like this:</p>
+
+<pre class="line-numbers"><code class="language-markdown">![Alt text](/path/to/img.jpg)
+
+![Alt text](/path/to/img.jpg &quot;Optional title&quot;)
+</code></pre>
+
+<p>You are able to use drag &amp; drop to insert an image from an image file or your web browser. You can modify the markdown source code by clicking on the image. A relative path will be used if the image that is added using drag &amp; drop is in same directory or sub-directory as the document you&#39;re currently editing.</p>
+
+<p>If you’re using markdown for building websites, you may specify a URL prefix for the image preview on your local computer with property <code>typora-root-url</code> in YAML Front Matters. For example, input <code>typora-root-url:/User/Abner/Website/typora.io/</code> in YAML Front Matters, and then <code>![alt](/blog/img/test.png)</code> will be treated as <code>![alt](file:///User/Abner/Website/typora.io/blog/img/test.png)</code> in Typora.</p>
+
+<p>You can find more details <a href="https://support.typora.io/Images/">here</a>.</p>
+
+<h3 id="toc_20">Emphasis</h3>
+
+<p>Markdown treats asterisks (<code>*</code>) and underscores (<code>_</code>) as indicators of emphasis. Text wrapped with one <code>*</code> or <code>_</code> will be wrapped with an HTML <code>&lt;em&gt;</code> tag. E.g:</p>
+
+<pre class="line-numbers"><code class="language-markdown">*single asterisks*
+
+_single underscores_
+</code></pre>
+
+<p>output:</p>
+
+<p><em>single asterisks</em></p>
+
+<p><u>single underscores</u></p>
+
+<p>GFM will ignore underscores in words, which is commonly used in code and names, like this:</p>
+
+<blockquote>
+<p>wow_great_stuff</p>
+
+<p>do_this_and_do_that_and_another_thing.</p>
+</blockquote>
+
+<p>To produce a literal asterisk or underscore at a position where it would otherwise be used as an emphasis delimiter, you can backslash escape it:</p>
+
+<pre class="line-numbers"><code class="language-markdown">\*this text is surrounded by literal asterisks\*
+</code></pre>
+
+<p>Typora recommends using the <code>*</code> symbol.</p>
+
+<h3 id="toc_21">Strong</h3>
+
+<p>A double <code>*</code> or <code>_</code> will cause its enclosed contents to be wrapped with an HTML <code>&lt;strong&gt;</code> tag, e.g:</p>
+
+<pre class="line-numbers"><code class="language-markdown">**double asterisks**
+
+__double underscores__
+</code></pre>
+
+<p>output:</p>
+
+<p><strong>double asterisks</strong></p>
+
+<p><strong>double underscores</strong></p>
+
+<p>Typora recommends using the <code>**</code> symbol.</p>
+
+<h3 id="toc_22">Code</h3>
+
+<p>To indicate an inline span of code, wrap it with backtick quotes (`). Unlike a pre-formatted code block, a code span indicates code within a normal paragraph. For example:</p>
+
+<pre class="line-numbers"><code class="language-markdown">Use the `printf()` function.
+</code></pre>
+
+<p>will produce:</p>
+
+<p>Use the <code>printf()</code> function.</p>
+
+<h3 id="toc_23">Strikethrough</h3>
+
+<p>GFM adds syntax to create strikethrough text, which is missing from standard Markdown.</p>
+
+<p><code>~~Mistaken text.~~</code> becomes <del>Mistaken text.</del></p>
+
+<h3 id="toc_24">Underlines</h3>
+
+<p>Underline is powered by raw HTML.</p>
+
+<p><code>&lt;u&gt;Underline&lt;/u&gt;</code> becomes <u>Underline</u>.</p>
+
+<h3 id="toc_25">Emoji :smile:</h3>
+
+<p>Input emoji with syntax <code>:smile:</code>.</p>
+
+<p>User can trigger auto-complete suggestions for emoji by pressing <code>ESC</code> key, or trigger it automatically after enabling it on preference panel. Also, inputting UTF-8 emoji characters directly is also supported by going to <code>Edit</code> -&gt; <code>Emoji &amp; Symbols</code> in the menu bar (macOS).</p>
+
+<h3 id="toc_26">Inline Math</h3>
+
+<p>To use this feature, please enable it first in the <code>Preference</code> Panel -&gt; <code>Markdown</code> Tab. Then, use <code>$</code> to wrap a TeX command. For example: <code>$\lim_{x \to \infty} \exp(-x) = 0$</code> will be rendered as LaTeX command.</p>
+
+<p>To trigger inline preview for inline math: input “$”, then press the <code>ESC</code> key, then input a TeX command.</p>
+
+<p>You can find more details <a href="https://support.typora.io/Math/">here</a>.</p>
+
+<h3 id="toc_27">Subscript</h3>
+
+<p>To use this feature, please enable it first in the <code>Preference</code> Panel -&gt; <code>Markdown</code> Tab. Then, use <code>~</code> to wrap subscript content. For example: <code>H~2~O</code>, <code>X~long\ text~</code>/</p>
+
+<h3 id="toc_28">Superscript</h3>
+
+<p>To use this feature, please enable it first in the <code>Preference</code> Panel -&gt; <code>Markdown</code> Tab. Then, use <code>^</code> to wrap superscript content. For example: <code>X^2^</code>.</p>
+
+<h3 id="toc_29">Highlight</h3>
+
+<p>To use this feature, please enable it first in the <code>Preference</code> Panel -&gt; <code>Markdown</code> Tab. Then, use <code>==</code> to wrap highlight content. For example: <code>==highlight==</code>.</p>
+
+<h2 id="toc_30">HTML</h2>
+
+<p>You can use HTML to style content what pure Markdown does not support. For example, use <code>&lt;span style=&quot;color:red&quot;&gt;this text is red&lt;/span&gt;</code> to add text with red color.</p>
+
+<h3 id="toc_31">Embed Contents</h3>
+
+<p>Some websites provide iframe-based embed code which you can also paste into Typora. For example:</p>
+
+<pre class="line-numbers"><code class="language-markdown">&lt;iframe height=&#39;265&#39; scrolling=&#39;no&#39; title=&#39;Fancy Animated SVG Menu&#39; src=&#39;http://codepen.io/jeangontijo/embed/OxVywj/?height=265&amp;theme-id=0&amp;default-tab=css,result&amp;embed-version=2&#39; frameborder=&#39;no&#39; allowtransparency=&#39;true&#39; allowfullscreen=&#39;true&#39; style=&#39;width: 100%;&#39;&gt;&lt;/iframe&gt;
+</code></pre>
+
+<h3 id="toc_32">Video</h3>
+
+<p>You can use the <code>&lt;video&gt;</code> HTML tag to embed videos. For example:</p>
+
+<pre class="line-numbers"><code class="language-markdown">&lt;video src=&quot;xxx.mp4&quot; /&gt;
+</code></pre>
+
+<h3 id="toc_33">Other HTML Support</h3>
+
+<p>You can find more details <a href="https://support.typora.io/HTML/">here</a>.</p>
+
+<div class="footnotes">
+<hr/>
+<ol>
+
+<li id="fn1">
+<p>Here is the <em>text</em> of the <strong>footnote</strong>.&nbsp;<a href="#fnref1" rev="footnote">&#8617;</a></p>
+</li>
+
+</ol>
+</div>
+
+                </article>
+                <div class="comments-wrap">
+                    <div class="share-comments">
+                        
+                        <script src="https://utteranc.es/client.js" repo="htzziot/blogcomments" issue-term="title" theme="github-light" crossorigin="anonymous" async>
+                        </script>
+                           
+                    </div>
+                </div>
+                <!-- end comments wrap -->
+            </div>
+            <div class="column">
+                <div class="card">
+    <header class="card-header">
+        <p class="card-header-title">
+            <span class="tran-notice">Notice</span>
+        </p>
+    </header>
+    <div class="card-content site-notice">
+        <div class="content">
+             本站可以使用Github账号登录评论文章 <br> <br>
+
+即将上线文章（2020.03.28更新） <br>
+- 滴答清单：解放大脑的工具 
+        </div>
+    </div>
+</div>
+<div class="card">
+    <header class="card-header">
+        <p class="card-header-title">
+            <span class="tran-site-categories">Categories</span>
+        </p>
+    </header>
+    <div class="card-content site-categories">
+        <div class="content">
+            <ul>
+                
+                <li><a href="%E5%B7%A5%E4%B8%9AAIOT.html">工业AIOT</a>   
+                </li>
+                
+                <li><a href="%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF.html">个人成长</a>   
+                </li>
+                
+                <li><a href="%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB.html">工具分享</a>   
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <header class="card-header">
+        <p class="card-header-title">
+            <span class="tran-site-tags">Tags</span>
+        </p>
+    </header>
+    <div class="card-content site-tags">
+        <div class="content">
+            <div class="tags">
+                
+                <a class="tag is-link is-light" href="tag_Azure.html">#Azure</a> 
+                <a class="tag is-link is-light" href="tag_Markdown.html">#Markdown</a> 
+                <a class="tag is-link is-light" href="tag_%E4%BA%A7%E5%93%81%E8%BF%90%E8%90%A5.html">#产品运营</a> 
+                <a class="tag is-link is-light" href="tag_%E5%B7%A5%E4%B8%9A%E6%95%B0%E6%8D%AE.html">#工业数据</a> 
+                <a class="tag is-link is-light" href="tag_%E6%80%9D%E7%BB%B4%E5%B7%A5%E5%85%B7.html">#思维工具</a> 
+                <a class="tag is-link is-light" href="tag_%E6%95%B0%E6%8D%AE%E6%80%9D%E7%BB%B4.html">#数据思维</a> 
+                <a class="tag is-link is-light" href="tag_%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html">#时间管理</a> 
+                <a class="tag is-link is-light" href="tag_%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95.html">#滴答清单</a> 
+                <a class="tag is-link is-light" href="tag_%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B.html">#网络课程</a> 
+                <a class="tag is-link is-light" href="tag_%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92.html">#职业规划</a> 
+                <a class="tag is-link is-light" href="tag_%E8%81%8C%E5%9C%BA%E6%8A%80%E8%83%BD.html">#职场技能</a> 
+                <a class="tag is-link is-light" href="tag_%E9%AB%98%E6%95%88%E8%BD%AF%E4%BB%B6.html">#高效软件</a> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="card">
+    <header class="card-header">
+        <p class="card-header-title">
+            <span class="tran-site-favoritesite">Favorites</span>
+        </p>
+    </header>
+    <div class="card-content site-categories">
+        <div class="content">
+            <ul>
+                <li><a href="https://shimo.im">石墨文档</a></li>
+            </ul>
+        </div>
+    </div>
+</div> -->
+            </div>
+        </div>
+        <!-- end columns -->
+    </div>
+    <!-- end container -->
+</section>  <footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            Copyright &copy; 2019 - 2020
+            <a target="_blank" href="http://www.beian.miit.gov.cn/">京ICP备19034965号-1</a>&nbsp;
+        </p>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="asset/prism.js"></script>
+
+
+<script type="text/javascript">
+    var imgApi = "https://picsum.photos/1024/";
+    var imgs = document.getElementsByClassName('random-img');
+    for (var i = 0; i <= imgs.length - 1; i++) {
+        // https://picsum.photos/1024/
+        imgs[i].setAttribute("src", imgApi + (400 + i));
+    }
+</script>
+
+  
+
+</body>
+
+</html>

@@ -4,7 +4,7 @@
   <title><![CDATA[麦氏增长曲线]]></title>
   <link href="https://blog.edgev.cn/atom.xml" rel="self"/>
   <link href="https://blog.edgev.cn/"/>
-  <updated>2020-03-26T20:25:56+08:00</updated>
+  <updated>2020-03-28T10:28:40+08:00</updated>
   <id>https://blog.edgev.cn/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -13,12 +13,488 @@
   <generator uri="http://www.mweb.im/">MWeb</generator>
   
   <entry>
-    <title type="html"><![CDATA[使用MWeb作为知识输出工具]]></title>
+    <title type="html"><![CDATA[知识管理与输出的工具使用探索]]></title>
     <link href="https://blog.edgev.cn/15851432046670.html"/>
     <updated>2020-03-25T21:33:24+08:00</updated>
     <id>https://blog.edgev.cn/15851432046670.html</id>
     <content type="html"><![CDATA[
-<p>使用markdown已经变成了一种习惯。</p>
+<h2 id="toc_0">我的使用需求是什么？</h2>
+
+<p>在这个信息爆炸的时代，每天都接触到各种渠道过来的信息。而且我本身对于各种新鲜事物比较感兴趣，愿意去探索和尝试一些新的思维、工具，并不断地去优化我自己的工具箱。在这个过程中，我学会了使用Markdown语法，并记录一些笔记和思考，希望能有个地方能输出和分享。<br/>
+经过一连串分析之后，我的需求逐渐清晰：</p>
+
+<p><strong>基本需求</strong></p>
+
+<ol>
+<li>在Mac（主力使用平台）、iOS和Win10上跨平台使用Markdown进行记录和写作；</li>
+<li>为工作记录产生的Markdown文件需要能够转成合适的格式（PDF、docx）在同事之间进行分享；</li>
+<li>为生活兴趣产生的Markdown文件需要能够在互联网上公开传播。</li>
+</ol>
+
+<p><strong>高效需求</strong></p>
+
+<ol>
+<li>在工具内提供分类管理和标签管理及搜索功能；</li>
+<li>从写作到发布的工作流集成程度较高；</li>
+<li>平台内容的可迁移性。</li>
+</ol>
+
+<h2 id="toc_1">工具箱1.0版</h2>
+
+<p>在明确自己的基本需求之后，我尝试了几款在网络上使用度较高的平台和软件，但最终使用了一款高颜值的跨平台Markdown编辑器<a href="https://typora.io/">Typora</a>。颜值高不高，其实你点进官网就能感受到了。<br/>
+对于基本需求来说，Typora是一个很好的工具。以至于现在即便切到MWeb上的时候，我还会偶尔使用它作为写作工具。<br/>
+为了配合<strong>Typora</strong>，我还有其他几个小工具辅助完成工作。<br/>
+<strong>1. OneDrive云盘。</strong> 感谢公司为我提供了Office 365的全部应用，国内商用版的访问速度很快。我把所有的Markdown文件都放在OneDrive的文件夹中，同时也把Typora导出的PDF、docx文件都放在另一个文件夹中。这样操作的好处是我的所有原始文件都依赖OneDrive做了多设备同步和版本管理，另一方面是给所有同事可以直接分享OneDrive的链接。<br/>
+<img src="http://img.edgev.cn//edgev/20200328093102.png" alt=""/></p>
+
+<blockquote>
+<p>福利：对于目前没有Office 365的同学，其实国内一直有一个很便宜的获取Office 365全套服务的方式。<a href="https://search.smzdm.com/?c=home&amp;s=office+365+%E5%AE%B6%E5%BA%AD%E7%89%88&amp;v=a">搜索“Office 365家庭版”</a>，通常大家会凑齐6个人一起拼团。一年不到50的费用，你说香不香？<br/>
+<img src="http://img.edgev.cn//edgev/20200328093600.png" alt=""/></p>
+</blockquote>
+
+<p><strong>2. 图床工具。</strong> 什么叫图床工具？就是把本地图片上传到云端存储，以减少在分享过程中大量图片的传输。例如在刚才云盘介绍过程中，我的Markdown写作页面显示实际上这样子的。<br/>
+<img src="http://img.edgev.cn//edgev/20200328094304.png" alt=""/><br/>
+现在在用的是<strong>PicGo</strong>和<strong>七牛云</strong>。在这篇文章中我不多讲如何配置图床工具了。</p>
+
+<p><strong>3. 基于Github的博客工具。</strong> 你现在看到的这个博客就是建立在Github的博客页面上的，这是为了满足输出和分享的需求。在初期，我是使用的Jekyll + Github Pages的方式建立了这个静态的博客页面。通常还有另一个方案是Hexo + Github Pages。这两个方案对于代码小白来说略显繁琐，因为你要学会使用：</p>
+
+<ul>
+<li>在本地电脑上搭建Jekyll或Hexo的编译环境；</li>
+<li>使用git向Github中提交变更；</li>
+<li>使用本地的代码编辑器（如：VScode）</li>
+</ul>
+
+<h2 id="toc_2">工具箱2.0版</h2>
+
+<p>对于工具箱2.0，更多是围绕MWeb做的调整。<br/>
+使用MWeb替代Typora之后，多了分类管理和标签管理，更方便了我对于知识的管理和搜索。在基本需求的满足上，MWeb其实也有缺点：不支持Windows平台。但是其提供的Markdown导入功能，可以让我在Windows平台继续用Markdown写作，然后在手机或者Mac端进行快捷导入。与它带来的优点相比，这一个小的妥协是我可以接受的。<br/>
+在工具箱2.0中配合MWeb的工具有哪些？<br/>
+<strong>1. iCloud云盘。</strong>作用其实与OneDrive类似。但在iOS和Mac上有更好的集成性。对于Windows的用户来说，依然可以使用OneDrive。<br/>
+<strong>2. 图床工具。</strong>这里和工具箱1.0版其实是一样的。值得提到的是，其实MWeb中内置了图床上传工具，并不需要单独再使用PicGo。我没有用到这个功能，主要还是因为我想尽量保证图片是在云端存储，而不是在文档库中。<br/>
+<img src="http://img.edgev.cn//edgev/20200328100134.png" alt=""/><br/>
+<strong>3. 基于Github的博客工具。</strong>这里和工具箱1.0版最大的不同是，MWeb替你集成了所有的工作。编辑网站样式、从文档库生成网站、发布网站只需要轻轻一点就完成了。完全不用切换到其他的工具上，整个流程也变得更加简洁和高效了。<br/>
+<img src="http://img.edgev.cn//edgev/20200328100613.png" alt=""/></p>
+
+<h2 id="toc_3">有哪些工具没有进入工具箱？</h2>
+
+<p>没有永远的工具。个人需求在演进，工具也在演进。当这两个因素向不同的方向演进时，这个工具就可能不适合了。<br/>
+<strong>印象笔记。</strong>老实说，印象笔记是我最早接触的知识管理软件。在2010年的时候，印象笔记和联通搞了一次送印象分的活动。我当时发动了身边所有有联通手机号的同学帮我薅羊毛，以至于到现在为止账户上的印象分还能支撑3年的高级会员兑换。印象笔记拥有很方便的信息收集功能，任何网上的信息在手机端通过分享或者微信的方式都能够导入，为什么我放弃了在上面继续进行知识管理呢？最主要的原因有两个：一是分享功能鸡肋；二是Markdown功能支持不好。<br/>
+<strong>有道云笔记。</strong>和印象笔记类似。因为印象笔记已经有高级会员了，所以这个软件我使用得很少。<br/>
+<strong>OneNote。</strong>受众面太窄，适合于工作圈内的同事分享。在国内有点水土不服。另外就是格式编辑上是个大问题。<br/>
+<strong>幕布。</strong>暂时来看，幕布并不支持太多的格式，它更适合于结构化的文档，类似于思维导图。其实我偶尔也还在用它，因为它也支持将思维导图导出为Markdown文件。<br/>
+<strong>石墨文档。</strong>太有工作气息了，是个简版的Office 365。适合于轻量化的协作场景。在我现在的需求中并未包含到需要多人协作来做知识管理，但在工作中我还是会和外部的同事、客户使用石墨文档来做信息沟通。<br/>
+<strong>熊掌记。</strong>熊掌记其实比印象笔记能更符合我的基本需求一些。最终放弃它的原因是每个月都要收费。<br/>
+<strong>语雀。</strong>还有没特别深度的使用过。</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Markdown的基本语法]]></title>
+    <link href="https://blog.edgev.cn/15853541898838.html"/>
+    <updated>2020-03-28T08:09:49+08:00</updated>
+    <id>https://blog.edgev.cn/15853541898838.html</id>
+    <content type="html"><![CDATA[
+<p>这篇文章是来源于Typora软件中的帮助文档。<br/>
+如果嫌英文看得费劲，可以查看<a href="https://zh.mweb.im/markdown.html">这里</a>的另一份中文教程。</p>
+
+<p>在刚开始接触Markdown的时候会一下子记不住那么多语法，我可以推荐优先学习以下几个内容，非常简单。</p>
+
+<ul>
+<li><a href="#toc_3">标题层级</a></li>
+<li><a href="#toc_5">无序符号</a></li>
+<li><a href="#toc_5">有序符号</a></li>
+<li><a href="#toc_4">引用</a></li>
+<li><a href="#toc_15">链接</a></li>
+<li><a href="#toc_19">图片</a></li>
+<li><a href="#toc_13">文章目录</a></li>
+<li>对于涉及代码记录的同学，可以再多记一个<a href="#toc_21">代码块</a>。</li>
+</ul>
+
+<hr/>
+
+<h2 id="toc_0">Overview</h2>
+
+<p><strong>Markdown</strong> is created by <a href="http://daringfireball.net/">Daring Fireball</a>; the original guideline is <a href="http://daringfireball.net/projects/markdown/syntax">here</a>. Its syntax, however, varies between different parsers or editors. <strong>Typora</strong> is using <a href="https://help.github.com/articles/github-flavored-markdown/">GitHub Flavored Markdown</a>.</p>
+
+<h2 id="toc_1">Block Elements</h2>
+
+<h3 id="toc_2">Paragraph and line breaks</h3>
+
+<p>A paragraph is simply one or more consecutive lines of text. In markdown source code, paragraphs are separated by two or more blank lines. In Typora, you only need one blank line (press <code>Return</code> once) to create a new paragraph.</p>
+
+<p>Press <code>Shift</code> + <code>Return</code> to create a single line break. Most other markdown parsers will ignore single line breaks, so in order to make other markdown parsers recognize your line break, you can leave two spaces at the end of the line, or insert <code>&lt;br/&gt;</code>.</p>
+
+<h3 id="toc_3">Headers</h3>
+
+<p>Headers use 1-6 hash (<code>#</code>) characters at the start of the line, corresponding to header levels 1-6. For example:</p>
+
+<pre class="line-numbers"><code class="language-markdown"># This is an H1
+
+## This is an H2
+
+###### This is an H6
+</code></pre>
+
+<p>In Typora, input ‘#’s followed by title content, and press <code>Return</code> key will create a header.</p>
+
+<h3 id="toc_4">Blockquotes</h3>
+
+<p>Markdown uses email-style &gt; characters for block quoting. They are presented as:</p>
+
+<pre class="line-numbers"><code class="language-markdown">&gt; This is a blockquote with two paragraphs. This is first paragraph.
+&gt;
+&gt; This is second pragraph. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+
+
+
+&gt; This is another blockquote with one paragraph. There is three empty line to seperate two blockquote.
+</code></pre>
+
+<p>In Typora, inputting ‘&gt;’ followed by your quote contents will generate a quote block. Typora will insert a proper ‘&gt;’ or line break for you. Nested block quotes (a block quote inside another block quote) by adding additional levels of ‘&gt;’.</p>
+
+<h3 id="toc_5">Lists</h3>
+
+<p>Input <code>* list item 1</code> will create an unordered list - the <code>*</code> symbol can be replace with <code>+</code> or <code>-</code>.</p>
+
+<p>Input <code>1. list item 1</code> will create an ordered list - their markdown source code is as follows:</p>
+
+<pre class="line-numbers"><code class="language-markdown">## un-ordered list
+*   Red
+*   Green
+*   Blue
+
+## ordered list
+1.  Red
+2.  Green
+3.  Blue
+</code></pre>
+
+<h3 id="toc_6">Task List</h3>
+
+<p>Task lists are lists with items marked as either [ ] or <a href="incomplete%20or%20complete">x</a>. For example:</p>
+
+<pre class="line-numbers"><code class="language-markdown">- [ ] a task list item
+- [ ] list syntax required
+- [ ] normal **formatting**, @mentions, #1234 refs
+- [ ] incomplete
+- [x] completed
+</code></pre>
+
+<p>You can change the complete/incomplete state by clicking on the checkbox before the item.</p>
+
+<h3 id="toc_7">(Fenced) Code Blocks</h3>
+
+<p>Typora only supports fences in GitHub Flavored Markdown. Original code blocks in markdown are not supported.</p>
+
+<p>Using fences is easy: Input ``` and press <code>return</code>. Add an optional language identifier after ``` and we&#39;ll run it through syntax highlighting:</p>
+
+<pre class="line-numbers"><code class="language-markdown">Here&#39;s an example:
+
+​```
+function test() {
+  console.log(&quot;notice the blank line before this function?&quot;);
+}
+​```
+
+syntax highlighting:
+​```ruby
+require &#39;redcarpet&#39;
+markdown = Redcarpet.new(&quot;Hello World!&quot;)
+puts markdown.to_html
+​```
+</code></pre>
+
+<h3 id="toc_8">Math Blocks</h3>
+
+<p>You can render <em>LaTeX</em> mathematical expressions using <strong>MathJax</strong>.</p>
+
+<p>To add a mathematical expression, input <code>$$</code> and press the &#39;Return&#39; key. This will trigger an input field which accepts <em>Tex/LaTex</em> source. For example:</p>
+
+<p>\[<br/>
+\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}<br/>
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\<br/>
+\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \\<br/>
+\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \\<br/>
+\end{vmatrix}<br/>
+\]</p>
+
+<p>In the markdown source file, the math block is a <em>LaTeX</em> expression wrapped by a pair of ‘$$’ marks:</p>
+
+<pre class="line-numbers"><code class="language-markdown">$$
+\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \\
+\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \\
+\end{vmatrix}
+$$
+</code></pre>
+
+<p>You can find more details <a href="https://support.typora.io/Math/">here</a>.</p>
+
+<h3 id="toc_9">Tables</h3>
+
+<p>Input <code>| First Header  | Second Header |</code> and press the <code>return</code> key. This will create a table with two columns.</p>
+
+<p>After a table is created, putting focus on that table will open up a toolbar for the table where you can resize, align, or delete the table. You can also use the context menu to copy and add/delete individual columns/rows.</p>
+
+<p>The full syntax for tables is described below, but it is not necessary to know the full syntax in detail as the markdown source code for tables is generated automatically by Typora.</p>
+
+<p>In markdown source code, they look like:</p>
+
+<pre class="line-numbers"><code class="language-markdown">| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+</code></pre>
+
+<p>You can also include inline Markdown such as links, bold, italics, or strikethrough in the table.</p>
+
+<p>Finally, by including colons (<code>:</code>) within the header row, you can define text in that column to be left-aligned, right-aligned, or center-aligned:</p>
+
+<pre class="line-numbers"><code class="language-markdown">| Left-Aligned  | Center Aligned  | Right Aligned |
+| :------------ |:---------------:| -----:|
+| col 3 is      | some wordy text | $1600 |
+| col 2 is      | centered        |   $12 |
+| zebra stripes | are neat        |    $1 |
+</code></pre>
+
+<p>A colon on the left-most side indicates a left-aligned column; a colon on the right-most side indicates a right-aligned column; a colon on both sides indicates a center-aligned column.</p>
+
+<h3 id="toc_10">Footnotes</h3>
+
+<pre class="line-numbers"><code class="language-markdown">You can create footnotes like this[^footnote].
+
+[^footnote]: Here is the *text* of the **footnote**.
+</code></pre>
+
+<p>will produce:</p>
+
+<p>You can create footnotes like this<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup>.</p>
+
+<p>Hover over the ‘footnote’ superscript to see content of the footnote.</p>
+
+<h3 id="toc_11">Horizontal Rules</h3>
+
+<p>Inputting <code>***</code> or <code>---</code> on a blank line and pressing <code>return</code> will draw a horizontal line.</p>
+
+<hr/>
+
+<h3 id="toc_12">YAML Front Matter</h3>
+
+<p>Typora now supports <a href="http://jekyllrb.com/docs/frontmatter/">YAML Front Matter</a>. Input <code>---</code> at the top of the article and then press <code>Return</code> to introduce a metadata block. Alternatively, you can insert a metadata block from the top menu of Typora.</p>
+
+<h3 id="toc_13">Table of Contents (TOC)</h3>
+
+<p>Input <code>[toc]</code> and press the <code>Return</code> key. This will create a  “Table of Contents” section. The TOC extracts all headers from the document, and its contents are updated automatically as you add to the document.</p>
+
+<h2 id="toc_14">Span Elements</h2>
+
+<p>Span elements will be parsed and rendered right after typing. Moving the cursor in middle of those span elements will expand those elements into markdown source. Below is an explanation of the syntax for each span element.</p>
+
+<h3 id="toc_15">Links</h3>
+
+<p>Markdown supports two styles of links: inline and reference.</p>
+
+<p>In both styles, the link text is delimited by [square brackets].</p>
+
+<p>To create an inline link, use a set of regular parentheses immediately after the link text’s closing square bracket. Inside the parentheses, put the URL where you want the link to point, along with an optional title for the link, surrounded in quotes. For example:</p>
+
+<pre class="line-numbers"><code class="language-markdown">This is [an example](http://example.com/ &quot;Title&quot;) inline link.
+
+[This link](http://example.net/) has no title attribute.
+</code></pre>
+
+<p>will produce:</p>
+
+<p>This is <a href="http://example.com/%22Title%22">an example</a> inline link. (<code>&lt;p&gt;This is &lt;a href=&quot;http://example.com/&quot; title=&quot;Title&quot;&gt;</code>)</p>
+
+<p><a href="http://example.net/">This link</a> has no title attribute. (<code>&lt;p&gt;&lt;a href=&quot;http://example.net/&quot;&gt;This link&lt;/a&gt; has no</code>)</p>
+
+<h4 id="toc_16">Internal Links</h4>
+
+<p><strong>You can set the href to headers</strong>, which will create a bookmark that allow you to jump to that section after clicking. For example:</p>
+
+<p>Command(on Windows: Ctrl) + Click <a href="#block-elements">This link</a> will jump to header <code>Block Elements</code>. To see how to write that, please move cursor or click that link with <code>⌘</code> key pressed to expand the element into markdown source.</p>
+
+<h4 id="toc_17">Reference Links</h4>
+
+<p>Reference-style links use a second set of square brackets, inside which you place a label of your choosing to identify the link:</p>
+
+<pre class="line-numbers"><code class="language-markdown">This is [an example][id] reference-style link.
+
+Then, anywhere in the document, you define your link label on a line by itself like this:
+
+[id]: http://example.com/  &quot;Optional Title Here&quot;
+</code></pre>
+
+<p>In Typora, they will be rendered like so:</p>
+
+<p>This is [an example][id] reference-style link.</p>
+
+<p>[id]: <a href="http://example.com/">http://example.com/</a>   &quot;Optional Title Here&quot;</p>
+
+<p>The implicit link name shortcut allows you to omit the name of the link, in which case the link text itself is used as the name. Just use an empty set of square brackets — for example, to link the word “Google” to the google.com web site, you could simply write:</p>
+
+<pre class="line-numbers"><code class="language-markdown">[Google][]
+And then define the link:
+
+[Google]: http://google.com/
+</code></pre>
+
+<p>In Typora, clicking the link will expand it for editing, and command+click will open the hyperlink in your web browser.</p>
+
+<h3 id="toc_18">URLs</h3>
+
+<p>Typora allows you to insert URLs as links, wrapped by <code>&lt;</code>brackets<code>&gt;</code>.</p>
+
+<p><code>&lt;i@typora.io&gt;</code> becomes <a href="mailto:i@typora.io">i@typora.io</a>.</p>
+
+<p>Typora will also automatically link standard URLs. e.g: <a href="http://www.google.com">www.google.com</a>.</p>
+
+<h3 id="toc_19">Images</h3>
+
+<p>Images have similar syntax as links, but they require an additional <code>!</code> char before the start of the link. The syntax for inserting an image looks like this:</p>
+
+<pre class="line-numbers"><code class="language-markdown">![Alt text](/path/to/img.jpg)
+
+![Alt text](/path/to/img.jpg &quot;Optional title&quot;)
+</code></pre>
+
+<p>You are able to use drag &amp; drop to insert an image from an image file or your web browser. You can modify the markdown source code by clicking on the image. A relative path will be used if the image that is added using drag &amp; drop is in same directory or sub-directory as the document you&#39;re currently editing.</p>
+
+<p>If you’re using markdown for building websites, you may specify a URL prefix for the image preview on your local computer with property <code>typora-root-url</code> in YAML Front Matters. For example, input <code>typora-root-url:/User/Abner/Website/typora.io/</code> in YAML Front Matters, and then <code>![alt](/blog/img/test.png)</code> will be treated as <code>![alt](file:///User/Abner/Website/typora.io/blog/img/test.png)</code> in Typora.</p>
+
+<p>You can find more details <a href="https://support.typora.io/Images/">here</a>.</p>
+
+<h3 id="toc_20">Emphasis</h3>
+
+<p>Markdown treats asterisks (<code>*</code>) and underscores (<code>_</code>) as indicators of emphasis. Text wrapped with one <code>*</code> or <code>_</code> will be wrapped with an HTML <code>&lt;em&gt;</code> tag. E.g:</p>
+
+<pre class="line-numbers"><code class="language-markdown">*single asterisks*
+
+_single underscores_
+</code></pre>
+
+<p>output:</p>
+
+<p><em>single asterisks</em></p>
+
+<p><u>single underscores</u></p>
+
+<p>GFM will ignore underscores in words, which is commonly used in code and names, like this:</p>
+
+<blockquote>
+<p>wow_great_stuff</p>
+
+<p>do_this_and_do_that_and_another_thing.</p>
+</blockquote>
+
+<p>To produce a literal asterisk or underscore at a position where it would otherwise be used as an emphasis delimiter, you can backslash escape it:</p>
+
+<pre class="line-numbers"><code class="language-markdown">\*this text is surrounded by literal asterisks\*
+</code></pre>
+
+<p>Typora recommends using the <code>*</code> symbol.</p>
+
+<h3 id="toc_21">Strong</h3>
+
+<p>A double <code>*</code> or <code>_</code> will cause its enclosed contents to be wrapped with an HTML <code>&lt;strong&gt;</code> tag, e.g:</p>
+
+<pre class="line-numbers"><code class="language-markdown">**double asterisks**
+
+__double underscores__
+</code></pre>
+
+<p>output:</p>
+
+<p><strong>double asterisks</strong></p>
+
+<p><strong>double underscores</strong></p>
+
+<p>Typora recommends using the <code>**</code> symbol.</p>
+
+<h3 id="toc_22">Code</h3>
+
+<p>To indicate an inline span of code, wrap it with backtick quotes (`). Unlike a pre-formatted code block, a code span indicates code within a normal paragraph. For example:</p>
+
+<pre class="line-numbers"><code class="language-markdown">Use the `printf()` function.
+</code></pre>
+
+<p>will produce:</p>
+
+<p>Use the <code>printf()</code> function.</p>
+
+<h3 id="toc_23">Strikethrough</h3>
+
+<p>GFM adds syntax to create strikethrough text, which is missing from standard Markdown.</p>
+
+<p><code>~~Mistaken text.~~</code> becomes <del>Mistaken text.</del></p>
+
+<h3 id="toc_24">Underlines</h3>
+
+<p>Underline is powered by raw HTML.</p>
+
+<p><code>&lt;u&gt;Underline&lt;/u&gt;</code> becomes <u>Underline</u>.</p>
+
+<h3 id="toc_25">Emoji :smile:</h3>
+
+<p>Input emoji with syntax <code>:smile:</code>.</p>
+
+<p>User can trigger auto-complete suggestions for emoji by pressing <code>ESC</code> key, or trigger it automatically after enabling it on preference panel. Also, inputting UTF-8 emoji characters directly is also supported by going to <code>Edit</code> -&gt; <code>Emoji &amp; Symbols</code> in the menu bar (macOS).</p>
+
+<h3 id="toc_26">Inline Math</h3>
+
+<p>To use this feature, please enable it first in the <code>Preference</code> Panel -&gt; <code>Markdown</code> Tab. Then, use <code>$</code> to wrap a TeX command. For example: <code>$\lim_{x \to \infty} \exp(-x) = 0$</code> will be rendered as LaTeX command.</p>
+
+<p>To trigger inline preview for inline math: input “$”, then press the <code>ESC</code> key, then input a TeX command.</p>
+
+<p>You can find more details <a href="https://support.typora.io/Math/">here</a>.</p>
+
+<h3 id="toc_27">Subscript</h3>
+
+<p>To use this feature, please enable it first in the <code>Preference</code> Panel -&gt; <code>Markdown</code> Tab. Then, use <code>~</code> to wrap subscript content. For example: <code>H~2~O</code>, <code>X~long\ text~</code>/</p>
+
+<h3 id="toc_28">Superscript</h3>
+
+<p>To use this feature, please enable it first in the <code>Preference</code> Panel -&gt; <code>Markdown</code> Tab. Then, use <code>^</code> to wrap superscript content. For example: <code>X^2^</code>.</p>
+
+<h3 id="toc_29">Highlight</h3>
+
+<p>To use this feature, please enable it first in the <code>Preference</code> Panel -&gt; <code>Markdown</code> Tab. Then, use <code>==</code> to wrap highlight content. For example: <code>==highlight==</code>.</p>
+
+<h2 id="toc_30">HTML</h2>
+
+<p>You can use HTML to style content what pure Markdown does not support. For example, use <code>&lt;span style=&quot;color:red&quot;&gt;this text is red&lt;/span&gt;</code> to add text with red color.</p>
+
+<h3 id="toc_31">Embed Contents</h3>
+
+<p>Some websites provide iframe-based embed code which you can also paste into Typora. For example:</p>
+
+<pre class="line-numbers"><code class="language-markdown">&lt;iframe height=&#39;265&#39; scrolling=&#39;no&#39; title=&#39;Fancy Animated SVG Menu&#39; src=&#39;http://codepen.io/jeangontijo/embed/OxVywj/?height=265&amp;theme-id=0&amp;default-tab=css,result&amp;embed-version=2&#39; frameborder=&#39;no&#39; allowtransparency=&#39;true&#39; allowfullscreen=&#39;true&#39; style=&#39;width: 100%;&#39;&gt;&lt;/iframe&gt;
+</code></pre>
+
+<h3 id="toc_32">Video</h3>
+
+<p>You can use the <code>&lt;video&gt;</code> HTML tag to embed videos. For example:</p>
+
+<pre class="line-numbers"><code class="language-markdown">&lt;video src=&quot;xxx.mp4&quot; /&gt;
+</code></pre>
+
+<h3 id="toc_33">Other HTML Support</h3>
+
+<p>You can find more details <a href="https://support.typora.io/HTML/">here</a>.</p>
+
+<div class="footnotes">
+<hr/>
+<ol>
+
+<li id="fn1">
+<p>Here is the <em>text</em> of the <strong>footnote</strong>.&nbsp;<a href="#fnref1" rev="footnote">&#8617;</a></p>
+</li>
+
+</ol>
+</div>
 
 ]]></content>
   </entry>
