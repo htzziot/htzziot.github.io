@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+         长投基金初级课程笔记 - 麦氏增长曲线 
+    </title>
+    
+    <link rel="shortcut icon" href="http://img.edgev.cn//edgev/20200325131907.png" type="image/png" />  
+    <link href="atom.xml" rel="alternate" title="麦氏增长曲线" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/style.min.css">
+    <link rel="stylesheet" href="asset/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="asset/css/doc.css">
+    <!--  -->
+    <!-- Global site tag - Baidu Analytics-->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?2f263d68cedfd6340dcbd59ea0f160d7";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script src="asset/app.js"></script>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="hero-head">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="container">
+                    <div class="navbar-brand">
+                        
+                        <a target="_self" class="navbar-item " href="index.html"><i class="fa fa-home"></i> &nbsp;&nbsp;Home</a> 
+                        <a target="_self" class="navbar-item " href="archives.html"><i class="fa fa-archive"></i> &nbsp;&nbsp;Archive</a> 
+                        <a target="_self" class="navbar-item " href="collection.html"><i class="fa fa-bookmark"></i> &nbsp;&nbsp;Collection</a> 
+
+                        <a role="button" id="navbarSNSRssSwitchBtn" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarSNSRssButtons">
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                        </a>
+                    </div>
+
+                    <div id="navbarSNSRssButtons" class="navbar-menu">
+                        <div class="navbar-start">
+
+                        </div>
+
+                        <div class="navbar-end">
+                            <div class="navbar-item">
+                                <!--buttons start-->
+                                <div class="buttons">
+                                    
+                                    <a href="https://instagram.com/macfotoo" target="_blank" title="instagram">
+                                        <span class="icon is-large has-text-grey-darker">
+                          <svg class="svg-inline--fa fa-instagram fa-w-14 fa-lg" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg><!-- <i class="fab fa-instagram fa-lg"></i> -->
+                        </span>
+                                    </a>
+                                       
+                                    <a href="https://github.com/htzziot" target="_blank" title="github">
+                                        <span class="icon is-large has-text-grey-darker">
+                          <svg class="svg-inline--fa fa-github fa-w-16 fa-lg" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github fa-lg"></i> -->
+                        </span>
+                                    </a>
+                                     
+                                    <a href="https://www.linkedin.com/in/mike-zhenquan-liu-4296127a/" target="_blank" title="linkedin">
+                                        <span class="icon is-large has-text-grey-darker">
+                          <img src="http://img.edgev.cn//edgev/20200325222238.png">
+                        </span>
+                                    </a>
+                                     
+                                    <a href="https://weibo.com/msweater" target="_blank" title="weibo">
+                                        <span class="icon is-large has-text-grey-darker">
+                          <svg class="svg-inline--fa fa-weibo fa-w-16 fa-lg" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="weibo" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"></path></svg><!-- <i class="fab fa-weibo fa-lg"></i> -->
+                        </span>
+                                    </a>
+                                     
+                                    <a href="mailto: lzq_ee@163.com" target="_blank" title="email">
+                                        <span class="icon is-large has-text-grey-darker">
+                          <svg class="svg-inline--fa fa-email fa-w-14 fa-lg" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1208" width="200" height="200"><path d="M935.335233 153.62202h-846.666656a84.666666 84.666666 0 0 0-84.666666 84.666666v550.333327a84.666666 84.666666 0 0 0 84.666666 84.666665h846.666656a84.666666 84.666666 0 0 0 84.666666-84.666665v-550.333327a84.666666 84.666666 0 0 0-84.666666-84.666666z m-27.293711 213.952665L557.558216 549.672927a94.993177 94.993177 0 0 1-87.065555 0.197555l-354.612218-182.202664a42.333333 42.333333 0 0 1 38.698311-75.308177l354.606573 182.202664a10.196689 10.196689 0 0 0 9.341556-0.022577l350.477662-182.089776a42.333333 42.333333 0 1 1 39.034155 75.127555z" fill="#2c2c2c" p-id="1209"></path></svg>
+                        </span>
+                                    </a>
+                                     
+                                    <a href="atom.xml" target="_blank" title="RSS">
+                                        <span class="icon is-large has-text-black-bis">
+                          <svg class="svg-inline--fa fa-rss fa-w-14 fa-lg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="rss" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z"></path></svg><!-- <i class="fas fa-rss fa-lg"></i> -->
+                        </span>
+                                    </a>
+                                </div>
+                                <!--buttons end-->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div> <div class="hero-body ct-body"></div>
+
+</section>
+<section class="ct-body">
+    <div class="container">
+        <div class="columns is-variable bd-klmn-columns is-4">
+            <div class="column is-two-thirds">
+                <div class="post-body single-content">
+                    <!--<div class="card-image">
+            <figure class="image">
+              <img class="random-img" src="">
+            </figure>
+          </div> -->
+                    <h1 class="title">
+                        长投基金初级课程笔记
+                    </h1>
+
+                    <div class="media">
+                        
+                        <figure class="media-left">
+                            <p class="image is-48x48">
+
+                                <img class="is-rounded" src="http://img.edgev.cn//edgev/20191013184152.JPG">
+                            </p>
+                        </figure>
+                        
+                        <div class="media-content">
+                            <div class="content">
+                                <p style="line-height: 29px">
+                                    
+                                    <i class="fa fa-user-secret"></i>&nbsp;
+                                    <a href="https://blog.edgev.cn">Mac Liu</a> &nbsp;&nbsp;&nbsp;
+                                    <span style="color: #ccc;">|</span>&nbsp;&nbsp;&nbsp; 
+                                    <span class="date">2020/04/06</span> 
+                                    <span class="tran-posted-in">posted in</span>&nbsp;&nbsp;&nbsp;  
+                                    <i class="fa fa-folder"></i>&nbsp;
+                                    <span class="posted-in"><a href='%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF.html'>个人成长</a></span>     &nbsp;&nbsp;&nbsp;
+                                    <span style="color: #ccc;">|</span>&nbsp;&nbsp;&nbsp;
+
+                                    <a class="tag is-link is-light" href='tag_%E5%9F%BA%E9%87%91.html'>#基金</a> 
+
+                                    <a class="tag is-link is-light" href='tag_%E7%90%86%E8%B4%A2.html'>#理财</a>  
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <article class="markdown-body single-content">
+                    <ul>
+<li>
+<a href="#toc_0"><strong>Day 1</strong></a>
+</li>
+<li>
+<a href="#toc_1">货币基金后面的字母</a>
+</li>
+<li>
+<a href="#toc_2">债券基金后面的字母与费率关系</a>
+</li>
+<li>
+<a href="#toc_3">基金招募说明书</a>
+<ul>
+<li>
+<a href="#toc_4">如何查找？</a>
+</li>
+<li>
+<a href="#toc_5">如何解读？</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_6"><strong>Day 2</strong></a>
+</li>
+<li>
+<a href="#toc_7">基金种类</a>
+<ul>
+<li>
+<a href="#toc_8">按投资品种分：</a>
+</li>
+<li>
+<a href="#toc_9">按交易渠道分：</a>
+</li>
+<li>
+<a href="#toc_10">按运作方式分：</a>
+</li>
+<li>
+<a href="#toc_11">按投资方式分：</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_12"><strong>Day 3</strong></a>
+</li>
+<li>
+<a href="#toc_13">货币基金筛选</a>
+<ul>
+<li>
+<a href="#toc_14">四个指标（按优先级排序）</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_15">债券基金筛选</a>
+<ul>
+<li>
+<a href="#toc_16">五个指标（按优先级排序）</a>
+</li>
+<li>
+<a href="#toc_17">买入卖出时间点</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_18"><strong>Day 4</strong></a>
+</li>
+<li>
+<a href="#toc_19">混合基金筛选</a>
+<ul>
+<li>
+<a href="#toc_20">7个筛选指标</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_21">股票基金</a>
+</li>
+<li>
+<a href="#toc_22"><strong>Day 5</strong></a>
+</li>
+<li>
+<a href="#toc_23">指数类型</a>
+<ul>
+<li>
+<a href="#toc_24">A股指数</a>
+</li>
+<li>
+<a href="#toc_25">美股指数</a>
+</li>
+<li>
+<a href="#toc_26">港股指数</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_27">指数基金优点</a>
+</li>
+<li>
+<a href="#toc_28">指数基金风险</a>
+</li>
+<li>
+<a href="#toc_29"><strong>Day 6</strong></a>
+</li>
+<li>
+<a href="#toc_30">指数基金的分类</a>
+</li>
+<li>
+<a href="#toc_31">筛选指数基金步骤</a>
+</li>
+<li>
+<a href="#toc_32"><strong>Day 7</strong></a>
+</li>
+<li>
+<a href="#toc_33">指数基金估值指标分析</a>
+</li>
+<li>
+<a href="#toc_34">长投温度指标</a>
+</li>
+<li>
+<a href="#toc_35"><strong>Day 8</strong></a>
+</li>
+<li>
+<a href="#toc_36">指数基金怎么买</a>
+</li>
+<li>
+<a href="#toc_37">根据指数温度进行投资</a>
+</li>
+<li>
+<a href="#toc_38">定投小技巧</a>
+</li>
+<li>
+<a href="#toc_39"><strong>Day 9</strong></a>
+</li>
+<li>
+<a href="#toc_40">四步简投法（干货满满）</a>
+<ul>
+<li>
+<a href="#toc_41">第一步，确定每次定投金额</a>
+</li>
+<li>
+<a href="#toc_42">第二步，选择指数基金</a>
+</li>
+<li>
+<a href="#toc_43">第三步，根据长投温度进行定投</a>
+</li>
+<li>
+<a href="#toc_44">第四步，定期审核并切换指数</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_45"><strong>Day 10</strong></a>
+</li>
+<li>
+<a href="#toc_46"><strong>Day 11</strong></a>
+</li>
+<li>
+<a href="#toc_47"><strong>Day 12</strong></a>
+</li>
+<li>
+<a href="#toc_48">投资心理建设</a>
+<ul>
+<li>
+<a href="#toc_49">不自信</a>
+</li>
+<li>
+<a href="#toc_50">赌博心理</a>
+</li>
+<li>
+<a href="#toc_51">投机心理</a>
+</li>
+<li>
+<a href="#toc_52">喜涨厌跌心理</a>
+</li>
+<li>
+<a href="#toc_53">不满足心理</a>
+</li>
+<li>
+<a href="#toc_54">盲目从众心理</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_55"><strong>Day 13</strong></a>
+</li>
+<li>
+<a href="#toc_56">资产配置</a>
+<ul>
+<li>
+<a href="#toc_57">如何实施？</a>
+</li>
+<li>
+<a href="#toc_58">小技巧</a>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h2 id="toc_0"><strong>Day 1</strong></h2>
+
+<h2 id="toc_1">货币基金后面的字母</h2>
+
+<p>货币基金通常在后面会有A和B，他们的主要区别在于申购金额的门槛和运作费率。<br/>
+<img src="http://img.edgev.cn//edgev/20200406170621.png" alt=""/></p>
+
+<h2 id="toc_2">债券基金后面的字母与费率关系</h2>
+
+<p>在分析基金持有成本时一定要注意运营成本，不能只考虑购买费率。例如，01001和01003的债券A型和债券C型在购买时网站显示的申购费率如下。<br/>
+<img src="http://img.edgev.cn//edgev/20200406163428.png" alt=""/><br/>
+<img src="http://img.edgev.cn//edgev/20200406163624.png" alt=""/><br/>
+即：投资1万元时，A型显示申购费用为<br/>
+<img src="http://img.edgev.cn//edgev/20200406163736.png" alt=""/><br/>
+C型显示申购费用为<br/>
+<img src="http://img.edgev.cn//edgev/20200406163821.png" alt=""/><br/>
+粗看，好像C型不要申购费用，更划算。但如果这时候买了C型，就亏了。因为如果仔细查看基金的详细费率，就会发现二者的赎回规则与费率相同，但C型比A型在每年多了0.3%的管理费用。<br/>
+<img src="http://img.edgev.cn//edgev/20200406164237.png" alt=""/><br/>
+对比一下，就知道在基金费率打折的情况下，A型的成本更低。</p>
+
+<table>
+<thead>
+<tr>
+<th>以1万为例</th>
+<th>A型</th>
+<th>C型</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>申购费率</td>
+<td>原价1%，折后0.1%，折后费用10元</td>
+<td>0%，0元</td>
+</tr>
+<tr>
+<td>管理费</td>
+<td>（0.6+0.2+0）%/年,80元/年</td>
+<td>(0.6+0.2+0.3)%，110元/年</td>
+</tr>
+</tbody>
+</table>
+
+<p>进一步思考，如果基金申购费率未打折，那我们就需要根据计划持有的时间来判定选哪个。显然，如果A型申购费率不打折维持在1%，那么如果这个基金我们计划持有3年以上，我们才会选择A型。小于3年的话，会选择C型。</p>
+
+<h2 id="toc_3">基金招募说明书</h2>
+
+<p>基金招募说明书是投资人了解基金的最基本也是最重要的文件之一，是投资前的必读文件。由于开放式基金的申购是一个持续的过程，其间有关基金的诸多因素均有可能发生变化，为此，招募说明书（公开说明书）必须定期更新。通常，自基金合同生效之日起，每6个月更新一次、并于6个月结束之日后的45日内公告，更新内容截至6个月的最后一日。</p>
+
+<h3 id="toc_4">如何查找？</h3>
+
+<p>天天基金网的基金公告中可以查到基金的招募说明书<br/>
+<img src="http://img.edgev.cn//edgev/20200406171221.png" alt=""/></p>
+
+<h3 id="toc_5">如何解读？</h3>
+
+<p>招募说明书可以重点关注以下内容：</p>
+
+<ol>
+<li>基金管理人是谁？</li>
+<li>基金经理是谁？他的经历和其他运作的基金有哪些？</li>
+<li>托管人是谁？</li>
+<li>基金如何申购和赎回？</li>
+<li>申购费率和赎回费率是多少？</li>
+<li>基金的投资理念和目标是什么？</li>
+<li>投资范围包括哪些？</li>
+<li>基金的业绩比较基准是什么？</li>
+<li>基金投资组合的限制规则是什么？组合配置和不得投资的内容是什么？</li>
+<li>风险收益特征是什么？</li>
+<li>基金的利润构成是什么？</li>
+<li>基金的管理费率及托管费率是多少？</li>
+<li>基金投资策略公告的风险是什么？</li>
+</ol>
+
+<h2 id="toc_6"><strong>Day 2</strong></h2>
+
+<h2 id="toc_7">基金种类</h2>
+
+<h3 id="toc_8">按投资品种分：</h3>
+
+<ul>
+<li>货币基金；</li>
+<li>债券基金；</li>
+<li>股票基金；</li>
+<li>混合基金。</li>
+</ul>
+
+<h3 id="toc_9">按交易渠道分：</h3>
+
+<ul>
+<li>场内基金；</li>
+<li>场外基金。</li>
+</ul>
+
+<h3 id="toc_10">按运作方式分：</h3>
+
+<ul>
+<li>开放式基金；</li>
+<li>封闭式基金。</li>
+</ul>
+
+<h3 id="toc_11">按投资方式分：</h3>
+
+<ul>
+<li>主动型基金；</li>
+<li>被动型基金，又称指数基金。</li>
+</ul>
+
+<h2 id="toc_12"><strong>Day 3</strong></h2>
+
+<p>货币基金和债券基金用于稳健的投资，货币基金的收益率在2%-4%，债券基金的收益率在4-6%。<br/>
+由于货币基金和债券基金的风险较小，应该优先关注货币基金的流动性和债券基金的收益率，并结合其他指标进行筛选。</p>
+
+<h2 id="toc_13">货币基金筛选</h2>
+
+<h3 id="toc_14">四个指标（按优先级排序）</h3>
+
+<ol>
+<li>流动性。查看是否是T+0和T+1。确认快速到账的时间。</li>
+<li>成立时间。3-5年以上。</li>
+<li>基金规模。过小，风险太大。过大，收益率受到影响。20亿到2000亿。</li>
+<li>收益率。每万份收益，七日年化收益率在3%左右。可以按近三年收益率进行排序。不用特别在意收益率。</li>
+</ol>
+
+<h2 id="toc_15">债券基金筛选</h2>
+
+<p>在债券基金中，根据投资资金的占比也可以分为两类：</p>
+
+<ul>
+<li>纯债基金：100%的资金都投资于债券；</li>
+<li>不纯的债券基金：80%以上资金投资于债券，剩下的20%投资于其他的投资品</li>
+</ul>
+
+<p>根据债券基金的整体风格，我们可以知道购买债券基金主要是为了保障资金安全。对于收益的追求应该放置到混合基金或者股票基金中。因此，在购买债券基金时还是应该首要考虑纯债基金。</p>
+
+<p>在纯债基金里，根据投资债券期限的长短有可以分为：</p>
+
+<ul>
+<li>短债基金。债券大多是1年内到期的。收益与货币基金差不多，但风险比货币基金大。因此不建议投资。</li>
+<li>中长债基金。债券大多是1-5年到期的。适合使用1-3年内要用到的钱进行投资。收益率约为6%-7%。</li>
+</ul>
+
+<h3 id="toc_16">五个指标（按优先级排序）</h3>
+
+<ol>
+<li>收益率。要看过去3年以上的收益率，选择收益率更高的。</li>
+<li>成立时间。3-5年以上。</li>
+<li>基金规模。5-100亿之间，规模适中较好。</li>
+<li>费率。费率影响成本，越低越好。</li>
+<li>基金经理是否频繁更换。越稳定越好。<br/>
+市面上的纯债基金产品同质化严重，年化收益率相差也不大。所 以我们只要选择历史表现最稳定、最好的就行啦。</li>
+</ol>
+
+<h3 id="toc_17">买入卖出时间点</h3>
+
+<p><mark>当市场利率（10年期国债利率）高于3.5%时，买入债券基金；反之则卖出基金，调整至货币基金。</mark><br/>
+由于债券基金收益波动不大，所以并不需要做定投。<br/>
+市场利率升高时，债券价格下跌；<br/>
+市场利率降低时，债券价格上升。<br/>
+!(10年期国债查询)[<a href="https://cn.investing.com/rates-bonds/china-10-year-bond-yield">https://cn.investing.com/rates-bonds/china-10-year-bond-yield</a>]</p>
+
+<p><strong>后续补充中的干货</strong> <img src="http://img.edgev.cn//edgev/20200409223145.png" alt=""/><br/>
+<img src="http://img.edgev.cn//edgev/20200409223359.png" alt=""/></p>
+
+<h2 id="toc_18"><strong>Day 4</strong></h2>
+
+<h2 id="toc_19">混合基金筛选</h2>
+
+<h3 id="toc_20">7个筛选指标</h3>
+
+<ol>
+<li>基金规模。需要规模适中，2-100亿之间的。这里有个反向疑问，市场上低于2亿规模或高于100亿的基金为什么会存在呢？他们在投资策略上会有有差别吗？</li>
+<li>收益率。3年以上。</li>
+<li>手续费。越低越好。</li>
+<li>成立时间，3年以上。</li>
+<li>基金经理更换频率。越低越好。</li>
+<li>基金公司盈利能力。在同类基金公司排名，是否跑赢沪深300指数。</li>
+<li>基金经理的选股择时能力。此指标较为主观，作为排除指标。从业情况小于3年，评分低于50，星级少于3星，管理的基金收益排名未跑赢同类基金或市场同期盈利水平。</li>
+</ol>
+
+<h2 id="toc_21">股票基金</h2>
+
+<p>与混合基金的筛选指标相同：</p>
+
+<ol>
+<li>基金业绩</li>
+<li>基金规模</li>
+<li>成立时间</li>
+<li>手续费</li>
+<li>基金公司业绩</li>
+<li>基金经理更换频率</li>
+<li>基金经理选股择时能力<br/>
+最后，还需要看一下大盘：在熊市里表现很烂，在牛市里表现抢眼的基金，要慎重选择。因为背后可能有一个喜欢投机的基金经理。</li>
+</ol>
+
+<h2 id="toc_22"><strong>Day 5</strong></h2>
+
+<h2 id="toc_23">指数类型</h2>
+
+<h3 id="toc_24">A股指数</h3>
+
+<ul>
+<li>上证50指数，排名前50的股票。</li>
+<li>沪深300指数，排名前300的股票。</li>
+<li>中证500指数，排名300-800的股票。</li>
+<li>创业板指数，100家成绩忽上忽下</li>
+<li>红利指数，分红比较稳定股。</li>
+</ul>
+
+<h3 id="toc_25">美股指数</h3>
+
+<ul>
+<li>标普500，500家美股上市公司。</li>
+<li>纳斯达克指数，所有美股公司。</li>
+</ul>
+
+<h3 id="toc_26">港股指数</h3>
+
+<ul>
+<li>恒生指数，50家最大的港股股票组成。</li>
+<li>H指数，港股中最大的33家大陆企业。</li>
+</ul>
+
+<h2 id="toc_27">指数基金优点</h2>
+
+<ol>
+<li>灭绝人性。隔绝了基金经理的影响。</li>
+<li>永垂不朽。成分股公司不断新陈代谢。</li>
+<li>笑到最后。坚持长期投资，穿越牛熊。</li>
+</ol>
+
+<h2 id="toc_28">指数基金风险</h2>
+
+<ol>
+<li>本质仍是股票型基金。短期波动明显。</li>
+<li>基金经理没有及时跟进调整，造成跟踪误差。</li>
+<li>基金规模过小或成立时间过短，都会造成指数基金风险升高。<br/>
+在天天基金网上可以查到跟踪误差。</li>
+</ol>
+
+<h2 id="toc_29"><strong>Day 6</strong></h2>
+
+<h2 id="toc_30">指数基金的分类</h2>
+
+<ul>
+<li>宽基指数基金：覆盖行业更多更广。</li>
+<li>行业指数基金：需要考虑整个行业的发展特点与阶段，受行业影响大。</li>
+<li>完全复制型指数基金：完全复制指数的成分股。</li>
+<li>增强型指数基金：在复制成分股的基础上，想要追求更多的收益。（长投不推荐这种）</li>
+</ul>
+
+<h2 id="toc_31">筛选指数基金步骤</h2>
+
+<ol>
+<li>选择指数。</li>
+<li>精选靠谱的基金公司。大基金公司长期运营的指数基金是首选。公司规模超过1000亿的</li>
+<li>锁定指数基金。
+<ol>
+<li>跟踪误差率。指数基金的重点不是收益率，而是跟踪误差率小，需要低于同行平均水平。</li>
+<li>基金规模。基金规模不应小于2亿元。</li>
+<li>成立年限。至少要成立3年。</li>
+<li>费用成本。管理费、托管费、申购费、赎回费。可以考虑场内基金。
+<img src="http://img.edgev.cn//edgev/20200411092353.png" alt=""/></li>
+</ol></li>
+</ol>
+
+<h2 id="toc_32"><strong>Day 7</strong></h2>
+
+<h2 id="toc_33">指数基金估值指标分析</h2>
+
+<p>估值指标不宜仅使用大盘点数。使用大盘点数（例如以3000点为界决定购买或撤出）不靠谱。因为指数从长期来看是向上的。<br/>
+估值指标也不宜仅使用市盈率（PE）。PE=公司市值/净利润。体现的是与股票的盈利能力相比，其价格是不是够便宜。可以通过PE评估一家公司是贵还是便宜，市盈率越低，公司越便宜。不同市场的市盈率水平不同，如A股市盈率大概在13倍，港股H股指数可能在10倍左右。但细分到行业，市盈率的水平也不相同。因此市盈率只能与历史数据进行纵向比较，没法与不同市场、不同行业的历史数据进行横向比较。<br/>
+估值指标也不宜仅使用市净率（PB）。PB=市值/净资产，体现的是公司净资产是否被低估或高估。但也有特例：某些公司（例如微软），其业务以知识产权为主，在资产投入方面很少，因此它的PB会很高，但不能因此判断它被高估了。</p>
+
+<h2 id="toc_34">长投温度指标</h2>
+
+<p>长投温度 =  （PE温度 + PB温度）/ 2 ，包含了市盈率和市净率两个指标。<br/>
+当长投温度是20度时，说明指数估值低于当前估值的概率只有20%，目前估值低，适合买入，上涨概率大；<br/>
+当长投温度是80度时，说明指数估值高于当前估值的概率高达80%，目前估值过高，适合卖出，下跌概率大；<br/>
+<img src="http://img.edgev.cn//edgev/20200412095217.png" alt=""/><br/>
+依据长投温度决定何时购买指数基金。</p>
+
+<h2 id="toc_35"><strong>Day 8</strong></h2>
+
+<h2 id="toc_36">指数基金怎么买</h2>
+
+<ol>
+<li>一次性投资<br/>
+一锤子买卖，缺点是当价格下跌时，手上已经没有子弹了。不推荐使用。</li>
+<li>不定期投资<br/>
+找到合适时机，缺点是会受到主观判断影响，择时太难。不推荐使用。</li>
+<li>定期定额<br/>
+属于定投。每个月定投一次，投资固定金额的资金。缺点是：不能高效利用资金。</li>
+<li>定期不定额<br/>
+属于定投。每个月定投一次，根据基金估值高低，便宜的时候多买点，在贵的时候少买点。与定期定额方式相比，相同的钱能买到更多的份额。</li>
+</ol>
+
+<h2 id="toc_37">根据指数温度进行投资</h2>
+
+<p>补充图片</p>
+
+<h2 id="toc_38">定投小技巧</h2>
+
+<ol>
+<li>手动设置定投日提醒</li>
+<li>坚持自己设定的温度投资原则，不要受主观情绪影响。</li>
+<li>投资收益要投入再利用，形成复利效应。</li>
+</ol>
+
+<h2 id="toc_39"><strong>Day 9</strong></h2>
+
+<h2 id="toc_40">四步简投法（干货满满）</h2>
+
+<h3 id="toc_41">第一步，确定每次定投金额</h3>
+
+<p>这里分为两种情况。</p>
+
+<ol>
+<li><p>有投资目标时（如：5年要换车20万）的定投金额确定。<br/>
+在excel中使用公式（电脑中补充）</p></li>
+<li><p>没有目标的。<br/>
+确定存量资金的每月投资额。从存量金额，拿出3-6个月的应急金。存量金额减去应急金就是可投资的存量资金总额。将这个总额按照15-20个月的周期分批投资，得到存量资金的每月投资额。</p></li>
+</ol>
+
+<p>确定增量资金的每月投资额。通过计算自己每月的收入支出结余，作为增量资金的每月投资额。</p>
+
+<p>确定自己的投资系数。长投给出的简单评估方法是：100减去当前年龄即为投资系数。例如当前年龄30岁的人，投资系数为70%，即他可以在每个月将存量资金每月定投额加上增量资金每月定投额的70%投入到定投中，剩下的30%可以放入货币基金。</p>
+
+<h3 id="toc_42">第二步，选择指数基金</h3>
+
+<p>根据长投温度选择温度低的指数基金。</p>
+
+<h3 id="toc_43">第三步，根据长投温度进行定投</h3>
+
+<p>买入操作，补充图片。<br/>
+特别要补充的时，当温度较低时（例如温度小于10时），可以把之前每个月留下的30%总额一起买入。<br/>
+卖出操作，当温度超过50时，按照策略分批卖出。<br/>
+等所有温度都高的时候，要分批卖出。全部卖出后，如果温度依然很高，就把钱放在货币基金里，耐心等待市场降温后重新投入。<br/>
+在重新投入时，可以将之前的所有收益作为存量资金按照简投四步法重新投入。</p>
+
+<h3 id="toc_44">第四步，定期审核并切换指数</h3>
+
+<h2 id="toc_45"><strong>Day 10</strong></h2>
+
+<p>实操练习</p>
+
+<p>场内场外的区别</p>
+
+<h2 id="toc_46"><strong>Day 11</strong></h2>
+
+<p>场内购买及卖出步骤<br/>
+场外购买及卖出步骤</p>
+
+<h2 id="toc_47"><strong>Day 12</strong></h2>
+
+<h2 id="toc_48">投资心理建设</h2>
+
+<h3 id="toc_49">不自信</h3>
+
+<p>误区一：钱太少，不适合投资<br/>
+定投本身没有太大的限制。<br/>
+开源节流，控制不合理的消费，并源源不断的投入投资进行定投。坚持就能感觉到复利的威力。</p>
+
+<h3 id="toc_50">赌博心理</h3>
+
+<p>误区二：把所有的钱都进行投资，以赚取更多心里。<br/>
+投资前搞清楚自己的资产和收入支出情况。根据四步简投法，记账很重要。</p>
+
+<h3 id="toc_51">投机心理</h3>
+
+<p>误区三：短期波段操作，低买高卖，赚把钱就走<br/>
+投资基金有两个很重要的原则：闲钱和长期。</p>
+
+<h3 id="toc_52">喜涨厌跌心理</h3>
+
+<p>误区四：希望股市一直上涨<br/>
+股市上涨可以让现在赚的多。但对于股市下跌可以让定投降低持有成本，未来能赚取更多。</p>
+
+<h3 id="toc_53">不满足心理</h3>
+
+<p>误区五：止盈早了感觉赚少了，不开心。<br/>
+没人能预测股市。当长投温度大于50度时，赚钱概率是20%，赔钱风险是80%。看清概率，就能明白自己的不满足心理。</p>
+
+<h3 id="toc_54">盲目从众心理</h3>
+
+<p>误区六：看到别人有更高收益的投资产品就想切换。<br/>
+在看到别人收益的时候，要考虑到别人的付出与学习。坚决不碰自己不懂的东西，赚自己当下能赚的钱。</p>
+
+<h2 id="toc_55"><strong>Day 13</strong></h2>
+
+<h2 id="toc_56">资产配置</h2>
+
+<p>把资产按照50-50的比例分配到股权类和债券类投资产品中。<br/>
+债券类：6%-7%，风险较低。<br/>
+股票类：收益最高，风险较大。<br/>
+坚持原则：买入分批购买，两类投资要同时购买。</p>
+
+<p>特点：<br/>
+少赚<br/>
+少亏</p>
+
+<h3 id="toc_57">如何实施？</h3>
+
+<ol>
+<li>根据自己的风险偏好，确定资产配置比例。</li>
+<li>每年定期做一次动态再平衡。强制将两部分资产恢复到配置比例。</li>
+</ol>
+
+<h3 id="toc_58">小技巧</h3>
+
+<ol>
+<li>同时配置大盘股基金和小盘股基金。</li>
+<li>同时配置不同区域经济的基金。</li>
+<li>在指数基金上也可以选择行业指数。</li>
+<li>在熟练配置后，可以加入一些主动因素，例如在长投温度低时多配置股票，在温度高时多配置债券。</li>
+</ol>
+
+                </article>
+                <div class="comments-wrap">
+                    <div class="share-comments">
+                        
+                        <script src="https://utteranc.es/client.js" repo="htzziot/blogcomments" issue-term="title" theme="github-light" crossorigin="anonymous" async>
+                        </script>
+                           
+                    </div>
+                </div>
+                <!-- end comments wrap -->
+            </div>
+            <div class="column">
+                <div class="card">
+    <header class="card-header">
+        <p class="card-header-title">
+            <span class="tran-notice">Notice</span>
+        </p>
+    </header>
+    <div class="card-content site-notice">
+        <div class="content">
+             本站可以使用Github账号登录评论文章 <br> <br>
+
+即将上线文章（2020.03.28更新） <br>
+- 滴答清单：解放大脑的工具 
+        </div>
+    </div>
+</div>
+<div class="card">
+    <header class="card-header">
+        <p class="card-header-title">
+            <span class="tran-site-categories">Categories</span>
+        </p>
+    </header>
+    <div class="card-content site-categories">
+        <div class="content">
+            <ul>
+                
+                <li><a href="%E5%B7%A5%E4%B8%9AAIOT.html">工业AIOT</a>   
+                </li>
+                
+                <li><a href="%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF.html">个人成长</a>   
+                </li>
+                
+                <li><a href="%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB.html">工具分享</a>   
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <header class="card-header">
+        <p class="card-header-title">
+            <span class="tran-site-tags">Tags</span>
+        </p>
+    </header>
+    <div class="card-content site-tags">
+        <div class="content">
+            <div class="tags">
+                
+                <a class="tag is-link is-light" href="tag_Azure.html">#Azure</a> 
+                <a class="tag is-link is-light" href="tag_Markdown.html">#Markdown</a> 
+                <a class="tag is-link is-light" href="tag_%E4%BA%A7%E5%93%81%E8%BF%90%E8%90%A5.html">#产品运营</a> 
+                <a class="tag is-link is-light" href="tag_%E5%9F%BA%E9%87%91.html">#基金</a> 
+                <a class="tag is-link is-light" href="tag_%E5%B7%A5%E4%B8%9A%E6%95%B0%E6%8D%AE.html">#工业数据</a> 
+                <a class="tag is-link is-light" href="tag_%E6%80%9D%E7%BB%B4%E5%B7%A5%E5%85%B7.html">#思维工具</a> 
+                <a class="tag is-link is-light" href="tag_%E6%8A%95%E8%B5%84%E7%90%86%E8%B4%A2.html">#投资理财</a> 
+                <a class="tag is-link is-light" href="tag_%E6%95%B0%E6%8D%AE%E6%80%9D%E7%BB%B4.html">#数据思维</a> 
+                <a class="tag is-link is-light" href="tag_%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html">#时间管理</a> 
+                <a class="tag is-link is-light" href="tag_%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95.html">#滴答清单</a> 
+                <a class="tag is-link is-light" href="tag_%E7%90%86%E8%B4%A2.html">#理财</a> 
+                <a class="tag is-link is-light" href="tag_%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B.html">#网络课程</a> 
+                <a class="tag is-link is-light" href="tag_%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92.html">#职业规划</a> 
+                <a class="tag is-link is-light" href="tag_%E8%81%8C%E5%9C%BA%E6%8A%80%E8%83%BD.html">#职场技能</a> 
+                <a class="tag is-link is-light" href="tag_%E8%B4%A2%E5%95%86.html">#财商</a> 
+                <a class="tag is-link is-light" href="tag_%E9%AB%98%E6%95%88%E8%BD%AF%E4%BB%B6.html">#高效软件</a> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="card">
+    <header class="card-header">
+        <p class="card-header-title">
+            <span class="tran-site-favoritesite">Favorites</span>
+        </p>
+    </header>
+    <div class="card-content site-categories">
+        <div class="content">
+            <ul>
+                <li><a href="https://shimo.im">石墨文档</a></li>
+            </ul>
+        </div>
+    </div>
+</div> -->
+            </div>
+        </div>
+        <!-- end columns -->
+    </div>
+    <!-- end container -->
+</section>  <footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            Copyright &copy; 2019 - 2020
+            <a target="_blank" href="http://www.beian.miit.gov.cn/">京ICP备19034965号-1</a>&nbsp;
+        </p>
+    </div>
+</footer>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    var imgApi = "https://picsum.photos/1024/";
+    var imgs = document.getElementsByClassName('random-img');
+    for (var i = 0; i <= imgs.length - 1; i++) {
+        // https://picsum.photos/1024/
+        imgs[i].setAttribute("src", imgApi + (400 + i));
+    }
+</script>
+
+  
+
+</body>
+
+</html>
